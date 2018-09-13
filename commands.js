@@ -9,12 +9,12 @@ load = function(app, profileName) {
 
 join = function(app, id) {
   app.channel=app.client.channels.get(id);
-  console.log("channel set to: " + app.channel.id);
+  log(app, "channel set to: " + app.channel.id);
   return app;
 }
 set = function(app, id) {
   app.server = app.client.guilds.get(id);
-  console.log("server set to: " + app.server.id);
+  log(app, "server set to: " + app.server.id);
   return app;
 }
 
@@ -29,6 +29,14 @@ function parse(message) {
   return command;
 }
 
+log = function(app, message) {
+  console.log(message);
+  if (app.adminChannel) {
+    app.adminChannel.send(message);
+  }
+}
+
 module.exports = {
-   parse: parse
+  parse: parse,
+  log: log,
 }

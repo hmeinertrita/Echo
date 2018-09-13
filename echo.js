@@ -12,12 +12,20 @@ const input = readline.createInterface({
 
 var app = {
   client: client,
+  admin: null,
+  adminChannel: null,
   channel: null,
   server: null,
 }
 
 input.on('line', (input) => {
-  app.channel.send(input);
+  const command = commands.parse(input);
+  if(command) {
+    app = command(app, input.replace(/^\S* /, ""));
+  }
+  else {
+    app.channel.send(input);
+  }
 });
 
 function init(token) {
@@ -30,16 +38,30 @@ function init(token) {
     const mess = message.cleanContent.replace("@" + client.user.username + " ", "");
 
     if (message.channel.type == 'dm' && message.author.id == config.USER) {
-      command = commands.parse(mess);
+
+      if (!app.adminChannel) {
+        app.adminChannel=message.channel;
+        commands.log(app, "initialized admin channel!");
+      }
+
+      if (!app.admin) {
+        app.admin=message.author;
+        commands.log(app, "initialized admin!");
+      }
+
+      const command = commands.parse(mess);
       if (command) {
         app = command(app, mess.replace(/^\S* /, ""));
       }
+      else {
+        app.channel.send(mess);
+      }
     }
     else if (app.channel && message.channel.id == app.channel.id) {
-      console.log(message.member.nickname + ": " + mess);
+      commands.log(app, message.member.nickname + ": " + mess);
     }
     else if (message.author.id != client.user.id){
-      console.log(message.member.nickname + '@' + message.channel.name + ": " + mess);
+      commands.log(app, '#' + message.channel.name + '@' + message.member.nickname + ": " + mess);
     }
 
   });
