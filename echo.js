@@ -10,13 +10,7 @@ const input = readline.createInterface({
   output: process.stdout
 });
 
-var app = {
-  client: client,
-  admin: null,
-  adminChannel: null,
-  channel: null,
-  server: null,
-}
+var app;
 
 input.on('line', (input) => {
   const command = commands.parse(input);
@@ -30,7 +24,13 @@ input.on('line', (input) => {
 
 function init(token) {
   client.on('ready', function(){
-    broadcast = client.createVoiceBroadcast();
+    app = {
+      client: client,
+      admin: null,
+      adminChannel: null,
+      channel: config.CHANNEL ? client.channels.get(config.CHANNEL) : null,
+      server: config.SERVER ? client.guilds.get(config.SERVER) : null,
+    }
     console.log("Discord Client ready");
   });
 
