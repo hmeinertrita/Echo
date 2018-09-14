@@ -29,14 +29,6 @@ function parse(message) {
   return command;
 }
 
-log = function(app, message) {
-  console.log(message);
-  if (app.adminChannel) {
-    app.adminChannel.send(message);
-  }
-}
-
 module.exports = {
-  parse: parse,
-  log: log,
+  parse: parse
 }
