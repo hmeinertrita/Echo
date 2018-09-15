@@ -23,6 +23,7 @@ class ConsoleAdminInterface extends AdminInterface {
       this.recieve(input);
     });
   }
+
   log(message) {
     console.log(message);
   }
