@@ -38,7 +38,7 @@ class DiscordAdminInterface extends AdminInterface {
       return id === message.author.id;
     });
     this.collector.on('collect', message => {
-      this.recieve(message.cleanContent.replace(/^\S* /, ""));
+      this.recieve(message.cleanContent);
     });
   }
   log(message) {
