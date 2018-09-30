@@ -1,6 +1,6 @@
 const discord = require('discord.js');
 const fs = require('fs');
-const config = JSON.parse(fs.readFileSync('config.json'));
+const config = JSON.parse(fs.readFileSync('bot-config.json'));
 const admin = require('./admin.js');
 const conversation = require('./conversation.js');
 const e = require('./echo.js');
