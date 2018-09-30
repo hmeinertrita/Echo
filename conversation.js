@@ -1,23 +1,43 @@
 var events = require('events');
 class Conversation extends events.EventEmitter {
-  constructor(channel) {
+  constructor(name, echoId) {
     super();
+    this.name = name;
+    this.echoId = echoId;
+  }
+
+  send(message) {
+  }
+
+  recieve(message, user) {
+    this.emit('message', message, user, this);
+  }
+}
+
+const discord = require('discord.js');
+class DiscordConversation extends Conversation {
+  constructor(channel, botId) {
+    super(channel.name, botId);
     this.channel = channel;
     this.collector = new discord.MessageCollector(channel, message => {
-      return id != message.author.id;
+      return botId != message.author.id;
     });
     this.collector.on('collect', message => {
-      this.emit('message', message);
+      this.recieve(message);
     });
   }
 
-  send(message, conversationId) {
-    if (conversationId == this.channel.id) {
-      this.channel.send(message);
-    }
+  send(message) {
+    this.channel.send(message);
+  }
+
+  recieve(message) {
+    const mess = message.cleanContent;
+    super.recieve(mess, message.member.nickname ? message.member.nickname:message.author.username);
   }
 }
 
 module.exports = {
   Conversation: Conversation,
+  DiscordConversation: DiscordConversation,
 }

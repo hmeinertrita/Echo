@@ -14,28 +14,28 @@ class Echo extends events.EventEmitter {
   //* Add a conversation Echo is in
   addConversation(conversation) {
     if(!this.app.currentConversation) {
-      this.app.currentConversation = conversation.id;
+      this.app.currentConversation = conversation;
     }
-
-    this.on('send', conversation.send);
-    conversation.on('message', message => {
-      listen(message);
+    this.on('send', (message) => {
+      conversation.send(message);
+    });
+    conversation.on('message', (message, user, conversation) => {
+      this.listen(message, user, conversation);
     });
   }
 
   //* Set the current conversation Echo is in
-  setCurrentConversation(id) {
-    this.app.currentConversation = id;
+  setCurrentConversation(conversation) {
+    this.app.currentConversation = conversation;
   }
 
   //* Handle a message sent in conversation Echo is in
-  listen(message) {
-    const mess = message.cleanContent.replace("@" + client.user.username + " ", "");
-    if (message.channel.id == this.app.currentConversation) {
-      this.log(message.member.nickname + ": " + mess);
+  listen(message, user, conversation) {
+    if (conversation === this.app.currentConversation) {
+      this.log(user + ": " + message);
     }
     else {
-      this.log('#' + message.channel.name + '@' + message.member.nickname + ": " + mess);
+      this.log('#' + conversation.name + '@' + user + ": " + message);
     }
   }
 
@@ -43,7 +43,6 @@ class Echo extends events.EventEmitter {
   send(message) {
     if(this.app.currentConversation){
       this.emit('send', message, this.app.currentConversation);
-      this.log(message);
     }
     else {
       this.log("No conversation specificed! Please specify a conversation before sending.");
@@ -56,7 +55,9 @@ class Echo extends events.EventEmitter {
 
   //* Add a admin interface
   addAdmin(adminInterface) {
-    this.on('log', adminInterface.log);
+    this.on('log', message => {
+      adminInterface.log(message);
+    });
     adminInterface.on('recieve', message => {
       this.recieve(message);
     });

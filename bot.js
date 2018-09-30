@@ -14,16 +14,19 @@ client.on('ready', function(){
     admin: null,
     server: config.SERVER ? client.guilds.get(config.SERVER) : null,
   }
-  echo.addConversation(new conversation.Conversation(client.channels.get(config.CHANNEL)));
+  echo.addConversation(new conversation.DiscordConversation(client.channels.get(config.CHANNEL), client.user.id));
   echo.addAdmin(new admin.ConsoleAdminInterface());
 
   console.log("Discord Client ready");
 });
 
-// client.on('message', function(message){
-//   if (message.channel.type == 'dm' && message.author.id == config.USER && mess == 'init') {
-//     echo.addAdmin(new admin.DiscordAdminInterface(message.channel, config.USER));
-//   }
-// });
+var initialized = false;
+client.on('message', function(message){
+  if (message.channel.type == 'dm' && message.author.id == config.USER && !initialized) {
+    echo.addAdmin(new admin.DiscordAdminInterface(message.channel, config.USER));
+    message.channel.send("Admin channel initialized");
+    initialized = true;
+  }
+});
 
 client.login(config.DISCORD_TOKEN);

@@ -35,7 +35,7 @@ class DiscordAdminInterface extends AdminInterface {
     super();
     this.channel = channel;
     this.collector = new discord.MessageCollector(channel, message => {
-      return id != message.author.id;
+      return id === message.author.id;
     });
     this.collector.on('collect', message => {
       this.recieve(message.cleanContent.replace(/^\S* /, ""));
