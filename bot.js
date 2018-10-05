@@ -34,7 +34,7 @@ function init(ech) {
   client.login(config.DISCORD_TOKEN);
 }
 
-init()
+//init()
 
 module.exports = {
   init: init

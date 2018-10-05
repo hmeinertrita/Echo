@@ -1,4 +1,5 @@
 var count = [0,0,0,0];
+const socket = io();
 $(document).ready(()=> {
   var input = $('#input');
 
@@ -23,14 +24,21 @@ $(document).ready(()=> {
 
   $('#message-form').submit(function(e) {
     var data = {mess: $('#input').val()};
-    $.post({
-      url: '/echo',
-      data: JSON.stringify(data),
-      success: (() => {console.log("ping!")}),
-      contentType: 'application/json'
-    });
+    // $.post({
+    //   url: '/echo',
+    //   data: JSON.stringify(data),
+    //   success: (() => {console.log("ping!")}),
+    //   contentType: 'application/json'
+    // });
+    socket.emit('recieve', data.mess);
+    $('#messages').append($('<li>').text(data.mess));
+    $('#input').val('');
     e.preventDefault();
   });
+
+  socket.on('log', function(msg){
+      $('#messages').append($('<li>').text(msg));
+    });
 });
 
 function update() {
