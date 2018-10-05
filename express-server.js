@@ -1,5 +1,4 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const bot = require('./bot.js');
 const admin = require('./admin.js');
 const conversation = require('./conversation.js');
