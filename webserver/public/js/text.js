@@ -20,6 +20,17 @@ $(document).ready(()=> {
       }
     }
   });
+
+  $('#message-form').submit(function(e) {
+    var data = {mess: $('#input').val()};
+    $.post({
+      url: '/echo',
+      data: JSON.stringify(data),
+      success: (() => {console.log("ping!")}),
+      contentType: 'application/json'
+    });
+    e.preventDefault();
+  });
 });
 
 function update() {

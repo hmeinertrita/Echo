@@ -46,8 +46,27 @@ class DiscordAdminInterface extends AdminInterface {
   }
 }
 
+class ExpressAdminInterface extends AdminInterface {
+  constructor(server, url) {
+    super();
+    this.server = server;
+    var r = this.recieve;
+    this.server.post(url, (req, res) => this.recieve(req, res));
+  }
+
+  recieve(request, response) {
+    var mess = request.body.mess;
+    super.recieve(mess);
+  }
+
+  log(message) {
+    //TODO
+  }
+}
+
 module.exports = {
   AdminInterface: AdminInterface,
   ConsoleAdminInterface: ConsoleAdminInterface,
   DiscordAdminInterface: DiscordAdminInterface,
+  ExpressAdminInterface: ExpressAdminInterface,
 }

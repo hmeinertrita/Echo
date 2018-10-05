@@ -1,20 +1,25 @@
-// server.js
-// where your node app starts
+const express = require('express');
+const bodyParser = require('body-parser');
+const bot = require('./bot.js');
+const admin = require('./admin.js');
+const conversation = require('./conversation.js');
+const e = require('./echo.js');
 
-// init project
-var express = require('express');
-var app = express();
 
-// we've started you off with Express,
-// but feel free to use whatever libs or frameworks you'd like through `package.json`.
 
-// http://expressjs.com/en/starter/static-files.html
+const app = express();
+app.use(express.urlencoded());
+app.use(express.json());
 app.use(express.static('webserver/public'));
 
-// http://expressjs.com/en/starter/basic-routing.html
+const echo = new e.Echo();
+bot.init(echo);
+
 app.get('/', function(request, response) {
-  response.sendFile(__dirname + 'webserver/views/echo.html');
+  response.sendFile(__dirname + '/webserver/views/echo.html');
 });
+
+echo.addAdmin(new admin.ExpressAdminInterface(app, '/echo'));
 
 // listen for requests :)
 var listener = app.listen(5000, function() {
