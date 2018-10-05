@@ -2,3 +2,4 @@ node_modules/**
 tokens.json
 config.json
 bot-config.json
+profiles/
