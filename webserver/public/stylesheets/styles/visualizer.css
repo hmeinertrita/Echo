@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,50 +24,50 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
-/* line 8, ../../sass/styles/visualizer.scss */
+/* line 8, ../../../sass/styles/visualizer.scss */
 .canvas {
   align-items: center;
   justify-content: center;
@@ -77,7 +77,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 100vh;
 }
 
-/* line 35, ../../sass/styles/visualizer.scss */
+/* line 35, ../../../sass/styles/visualizer.scss */
 .polyhedron {
   position: absolute;
   top: 50%;
@@ -110,7 +110,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
   }
 }
-/* line 79, ../../sass/styles/visualizer.scss */
+/* line 79, ../../../sass/styles/visualizer.scss */
 .edge {
   box-sizing: content-box;
   transform-style: preserve-3d;
@@ -121,70 +121,43 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transform-origin: top left;
   --angle: 2.18628rad;
 }
-/* line 89, ../../sass/styles/visualizer.scss */
+/* line 89, ../../../sass/styles/visualizer.scss */
 .edge.base {
   border: 1px solid blue;
 }
-/* line 94, ../../sass/styles/visualizer.scss */
+/* line 94, ../../../sass/styles/visualizer.scss */
 .edge__0 {
   transform: rotateZ(0deg) rotateY(var(--angle));
 }
-/* line 94, ../../sass/styles/visualizer.scss */
+/* line 94, ../../../sass/styles/visualizer.scss */
 .edge__1 {
   transform: rotateZ(120deg) rotateY(var(--angle));
 }
-/* line 94, ../../sass/styles/visualizer.scss */
+/* line 94, ../../../sass/styles/visualizer.scss */
 .edge__2 {
   transform: rotateZ(240deg) rotateY(var(--angle));
 }
 
-/* line 100, ../../sass/styles/visualizer.scss */
+/* line 100, ../../../sass/styles/visualizer.scss */
 .vertex {
   position: absolute;
   transform-style: preserve-3d;
   transform-origin: top left;
   --translate: 61.23724px;
 }
-/* line 106, ../../sass/styles/visualizer.scss */
+/* line 106, ../../../sass/styles/visualizer.scss */
 .vertex__0 {
   transform: rotateZ(-60deg) translateZ(var(--translate));
 }
-/* line 110, ../../sass/styles/visualizer.scss */
+/* line 110, ../../../sass/styles/visualizer.scss */
 .vertex__1 {
   transform: rotateZ(0deg) rotateY(1.91063rad) translateZ(var(--translate));
 }
-/* line 110, ../../sass/styles/visualizer.scss */
+/* line 110, ../../../sass/styles/visualizer.scss */
 .vertex__2 {
   transform: rotateZ(120deg) rotateY(1.91063rad) translateZ(var(--translate));
 }
-/* line 110, ../../sass/styles/visualizer.scss */
+/* line 110, ../../../sass/styles/visualizer.scss */
 .vertex__3 {
   transform: rotateZ(240deg) rotateY(1.91063rad) translateZ(var(--translate));
-}
-
-/* line 2, ../../sass/styles/messaging.scss */
-.messages {
-  display: flex;
-  flex-direction: column;
-  max-width: 590px;
-  width: 100%;
-}
-
-/* line 9, ../../sass/styles/messaging.scss */
-.send-message {
-  display: flex;
-  flex-direction: column;
-  max-width: 590px;
-  width: 100%;
-}
-
-/* line 16, ../../sass/styles/messaging.scss */
-.interface {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: space-between;
-  padding: 10% 0;
-  width: 100vw;
 }
