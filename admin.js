@@ -47,26 +47,11 @@ class DiscordAdminInterface extends AdminInterface {
 }
 
 class ExpressAdminInterface extends AdminInterface {
-  constructor(socket, server, postUrl, getUrl) {
+  constructor(server, pushLog) {
     super();
-    this.messages = [];
     this.server = server;
-    this.socket = socket;
-
-    //Non-persistent handling
-    this.server.post(postUrl, (req, res) => this.recieve(req, res));
-    this.server.get(getUrl, (req, res) => {
-      res.setHeader('Content-Type', 'application/json');
-      res.send({
-        latestMessage: this.messages[-1],
-        messages: messages
-      });
-    });
-
-    //Persistent handling
-    socket.on('recieve', msg => {
-      super.recieve(msg);
-    });
+    this.sockets = [];
+    this.pushLog = pushLog;
   }
 
   recieve(request, response) {
@@ -74,9 +59,19 @@ class ExpressAdminInterface extends AdminInterface {
     super.recieve(mess);
   }
 
+  addSocket(socket) {
+    this.sockets.push(socket);
+    console.log("adding socket! "+this.sockets.length);
+    socket.on('recieve', msg => {
+      super.recieve(msg);
+    });
+  }
+
   log(message) {
-    this.messages.push(message);
-    this.socket.emit('log', message);
+    this.pushLog(message);
+    this.sockets.forEach(s => {
+      s.emit('log', message);
+    });
   }
 }
 
