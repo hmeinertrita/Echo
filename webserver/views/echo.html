@@ -8,14 +8,21 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
   <body>
-    <span>Type!</span>
-    <form id="message-form">
-      <input type="text" id="input" name="mess">
-    </form>
+    <div class="interface">
+      <div class="messages">
+        <h2 class="messages__header">RECEIVED_COMMS:</h2>
+        <ul class="messages__list" id="messages"></ul>
+      </div>
 
-    <ul id="messages">
 
-    </ul>
+      <div class="send-message">
+        <label for='mess' class='send-message__label'>SEND_MESSAGE:</label>
+        <form id="message-form">
+          <input class='send-message__input' type="text" id="input" name="mess">
+        </form>
+      </div>
+    </div>
+
 
     <div class="polyhedron">
       <div class="vertex vertex__0">

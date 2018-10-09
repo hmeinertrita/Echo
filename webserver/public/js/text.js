@@ -5,7 +5,6 @@ $(document).ready(()=> {
 
   input.on('keyup', function(event){
     var keycode = (event.originalEvent.keyCode ? event.originalEvent.keyCode : event.originalEvent.which);
-    console.log(keycode);
 
     //const index = keycode%4; //vertex depends on key pressed
     const index = Math.floor(Math.random()*4); //random vertex
