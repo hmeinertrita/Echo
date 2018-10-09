@@ -2,7 +2,7 @@
 .messages {
   display: flex;
   flex-direction: column;
-  max-width: 590px;
+  max-width: 390px;
   width: 100%;
 }
 
@@ -10,13 +10,18 @@
 .send-message {
   display: flex;
   flex-direction: column;
-  max-width: 590px;
+  max-width: 390px;
+  width: 100%;
+}
+/* line 14, ../../../sass/styles/messaging.scss */
+.send-message__input {
   width: 100%;
 }
 
-/* line 16, ../../../sass/styles/messaging.scss */
+/* line 19, ../../../sass/styles/messaging.scss */
 .interface {
   align-items: center;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   height: 100vh;

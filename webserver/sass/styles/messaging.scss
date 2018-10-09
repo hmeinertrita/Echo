@@ -1,4 +1,4 @@
-$web-width: 590px;
+$web-width: 390px;
 .messages {
   display: flex;
   flex-direction: column;
@@ -11,10 +11,14 @@ $web-width: 590px;
   flex-direction: column;
   max-width: $web-width;
   width: 100%;
+  &__input {
+    width: 100%;
+  }
 }
 
 .interface {
   align-items: center;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   height: 100vh;
