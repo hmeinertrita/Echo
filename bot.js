@@ -1,6 +1,11 @@
 const discord = require('discord.js');
 const fs = require('fs');
-const config = JSON.parse(fs.readFileSync('bot-config.json'));
+const config = process.argv[2] !== 'glitch' ? JSON.parse(fs.readFileSync('bot-config.json')) : {
+  DISCORD_TOKEN: process.env.DISCORD_TOKEN,
+  USER: process.env.USER,
+  SERVER: process.env.SERVER,
+  CHANNEL: process.env.CHANNEL,
+};
 const admin = require('./admin.js');
 const conversation = require('./conversation.js');
 const e = require('./echo.js');
