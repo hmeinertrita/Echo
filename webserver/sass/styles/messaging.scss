@@ -81,7 +81,8 @@ $small-device: 598px;
   padding: 10% 0;
   width: 100vw;
   @media (max-width: $small-device) {
-    padding: 8px 16px;
+    padding: 16px;
+    height: 120vw;
   }
 }
 

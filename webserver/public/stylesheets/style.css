@@ -260,11 +260,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 @media (max-width: 598px) {
   /* line 74, ../../sass/styles/messaging.scss */
   .interface {
-    padding: 8px 16px;
+    padding: 16px;
+    height: 120vw;
   }
 }
 
-/* line 88, ../../sass/styles/messaging.scss */
+/* line 89, ../../sass/styles/messaging.scss */
 .visualizer {
   flex-grow: 1;
   position: relative;
