@@ -181,7 +181,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 @media (max-width: 598px) {
   /* line 8, ../../sass/styles/messaging.scss */
   .messages__box {
-    height: 75vw;
+    height: 40vw;
   }
 }
 /* line 19, ../../sass/styles/messaging.scss */
@@ -194,7 +194,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 @media (max-width: 598px) {
   /* line 19, ../../sass/styles/messaging.scss */
   .messages__default {
-    min-height: 75vw;
+    min-height: 40vw;
   }
 }
 /* line 29, ../../sass/styles/messaging.scss */
@@ -262,7 +262,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   /* line 75, ../../sass/styles/messaging.scss */
   .interface {
     padding: 16px;
-    height: 120vw;
+    height: 80vw;
   }
 }
 
@@ -276,7 +276,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .visualizer {
     filter: blur(1px);
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 50%;
     z-index: -1000;
   }

@@ -12,7 +12,7 @@ $small-device: 598px;
     border: 1px solid;
     overflow-y: auto;
     @media (max-width: $small-device) {
-      height: 75vw;
+      height: 40vw;
     }
   }
 
@@ -22,7 +22,7 @@ $small-device: 598px;
     display: flex;
     flex-direction: column;
     @media (max-width: $small-device) {
-      min-height: 75vw;
+      min-height: 40vw;
     }
   }
 
@@ -83,7 +83,7 @@ $small-device: 598px;
   width: 100vw;
   @media (max-width: $small-device) {
     padding: 16px;
-    height: 120vw;
+    height: 80vw;
   }
 }
 
@@ -93,7 +93,7 @@ $small-device: 598px;
   @media (max-width: $small-device) {
     filter: blur(1px);
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 50%;
     z-index: -1000;
   }
