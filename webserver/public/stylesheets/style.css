@@ -181,7 +181,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 @media (max-width: 598px) {
   /* line 8, ../../sass/styles/messaging.scss */
   .messages__box {
-    height: 100px;
+    height: 75vw;
   }
 }
 /* line 19, ../../sass/styles/messaging.scss */
@@ -194,51 +194,52 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 @media (max-width: 598px) {
   /* line 19, ../../sass/styles/messaging.scss */
   .messages__default {
-    min-height: 100px;
+    min-height: 75vw;
   }
 }
 /* line 29, ../../sass/styles/messaging.scss */
 .messages__scroll {
   height: 24px;
-  background: grey;
+  background: rgba(0, 0, 0, 0.5);
 }
 /* line 34, ../../sass/styles/messaging.scss */
 .messages__old {
-  background: lightgrey;
+  background: rgba(0, 0, 0, 0.3);
   flex-shrink: 0;
   list-style: none;
+  backdrop-filter: blur(1px);
 }
-/* line 40, ../../sass/styles/messaging.scss */
+/* line 41, ../../sass/styles/messaging.scss */
 .messages__new {
   list-style: none;
   display: flex;
   flex-direction: column-reverse;
 }
-/* line 46, ../../sass/styles/messaging.scss */
+/* line 47, ../../sass/styles/messaging.scss */
 .messages__logs {
   display: flex;
   flex-direction: column;
 }
-/* line 50, ../../sass/styles/messaging.scss */
+/* line 51, ../../sass/styles/messaging.scss */
 .messages__link {
   color: white;
-  background: black;
+  background: rgba(0, 0, 0, 0.7);
   text-decoration: none;
 }
-/* line 54, ../../sass/styles/messaging.scss */
+/* line 55, ../../sass/styles/messaging.scss */
 .messages__link:visited {
   color: white;
   text-decoration: none;
 }
 
-/* line 61, ../../sass/styles/messaging.scss */
+/* line 62, ../../sass/styles/messaging.scss */
 .send-message {
   display: flex;
   flex-direction: column;
   max-width: 390px;
   width: 100%;
 }
-/* line 66, ../../sass/styles/messaging.scss */
+/* line 67, ../../sass/styles/messaging.scss */
 .send-message__input {
   box-sizing: border-box;
   width: 100%;
@@ -246,7 +247,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-radius: 0;
 }
 
-/* line 74, ../../sass/styles/messaging.scss */
+/* line 75, ../../sass/styles/messaging.scss */
 .interface {
   align-items: center;
   box-sizing: border-box;
@@ -258,21 +259,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 100vw;
 }
 @media (max-width: 598px) {
-  /* line 74, ../../sass/styles/messaging.scss */
+  /* line 75, ../../sass/styles/messaging.scss */
   .interface {
     padding: 16px;
     height: 120vw;
   }
 }
 
-/* line 89, ../../sass/styles/messaging.scss */
+/* line 90, ../../sass/styles/messaging.scss */
 .visualizer {
   flex-grow: 1;
   position: relative;
 }
+@media (max-width: 598px) {
+  /* line 90, ../../sass/styles/messaging.scss */
+  .visualizer {
+    filter: blur(1px);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    z-index: -1000;
+  }
+}
 
 @media (max-width: 598px) {
-  /* line 94, ../../sass/styles/messaging.scss */
+  /* line 102, ../../sass/styles/messaging.scss */
   html {
     position: absolute;
     bottom: 0;

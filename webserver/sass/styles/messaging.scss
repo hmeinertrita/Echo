@@ -12,7 +12,7 @@ $small-device: 598px;
     border: 1px solid;
     overflow-y: auto;
     @media (max-width: $small-device) {
-      height: 100px;
+      height: 75vw;
     }
   }
 
@@ -22,19 +22,20 @@ $small-device: 598px;
     display: flex;
     flex-direction: column;
     @media (max-width: $small-device) {
-      min-height: 100px;
+      min-height: 75vw;
     }
   }
 
   &__scroll {
     height: 24px;
-    background: grey;
+    background: rgba(0,0,0,0.5);
   }
 
   &__old {
-    background: lightgrey;
+    background: rgba(0,0,0,0.3);
     flex-shrink: 0;
     list-style: none;
+    backdrop-filter: blur(1px);
   }
 
   &__new {
@@ -49,7 +50,7 @@ $small-device: 598px;
   }
   &__link {
     color: white;
-    background: black;
+    background: rgba(0,0,0,0.7);
     text-decoration: none;
     &:visited {
       color: white;
@@ -89,6 +90,13 @@ $small-device: 598px;
 .visualizer {
   flex-grow: 1;
   position: relative;
+  @media (max-width: $small-device) {
+    filter: blur(1px);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    z-index: -1000;
+  }
 }
 
 html {
