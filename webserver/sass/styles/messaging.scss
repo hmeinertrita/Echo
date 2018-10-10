@@ -35,6 +35,20 @@ $web-width: 390px;
     display: flex;
     flex-direction: column-reverse;
   }
+
+  &__logs {
+    display: flex;
+    flex-direction: column;
+  }
+  &__link {
+    color: white;
+    background: black;
+    text-decoration: none;
+    &:visited {
+      color: white;
+      text-decoration: none;
+    }
+  }
 }
 
 .send-message {

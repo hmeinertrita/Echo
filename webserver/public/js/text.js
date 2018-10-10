@@ -30,11 +30,10 @@ $(document).ready(()=> {
   });
 
 
-  $.get('/logs',{},data => {
+  $.get('/recentlogs',{},data => {
     data.logs.forEach(msg => {
       $('#old-messages').append($('<li class="-old-message">').text(msg));
     });
-    if (data.logs.length) {$('#default-view').prepend($('<div class="messages__scroll">').text('MSG_HISTORY_SCROLL^'))}
     var box = document.getElementById("messages");
     $("#messages").scrollTop(box.scrollHeight-box.clientHeight);
   })

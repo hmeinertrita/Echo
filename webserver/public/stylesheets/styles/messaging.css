@@ -37,20 +37,36 @@
   display: flex;
   flex-direction: column-reverse;
 }
+/* line 39, ../../../sass/styles/messaging.scss */
+.messages__logs {
+  display: flex;
+  flex-direction: column;
+}
+/* line 43, ../../../sass/styles/messaging.scss */
+.messages__link {
+  color: white;
+  background: black;
+  text-decoration: none;
+}
+/* line 47, ../../../sass/styles/messaging.scss */
+.messages__link:visited {
+  color: white;
+  text-decoration: none;
+}
 
-/* line 40, ../../../sass/styles/messaging.scss */
+/* line 54, ../../../sass/styles/messaging.scss */
 .send-message {
   display: flex;
   flex-direction: column;
   max-width: 390px;
   width: 100%;
 }
-/* line 45, ../../../sass/styles/messaging.scss */
+/* line 59, ../../../sass/styles/messaging.scss */
 .send-message__input {
   width: 100%;
 }
 
-/* line 50, ../../../sass/styles/messaging.scss */
+/* line 64, ../../../sass/styles/messaging.scss */
 .interface {
   align-items: center;
   box-sizing: border-box;
@@ -62,7 +78,7 @@
   width: 100vw;
 }
 
-/* line 61, ../../../sass/styles/messaging.scss */
+/* line 75, ../../../sass/styles/messaging.scss */
 .visualizer {
   flex-grow: 1;
   position: relative;

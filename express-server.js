@@ -3,7 +3,7 @@ const bot = require('./bot.js');
 const admin = require('./admin.js');
 const conversation = require('./conversation.js');
 const e = require('./echo.js');
-
+const fs = require('fs');
 
 
 const app = express();
@@ -14,19 +14,23 @@ app.use(express.json());
 app.use(express.static('webserver/public'));
 
 const logs = [];
+var stream = fs.createWriteStream("webserver/log.txt", {flags:'a'});
 function pushLog(logMessage) {
   logs.push(logMessage);
+  stream.write((new Date()).toUTCString() + " ------ " + logMessage + "\n");
 }
 app.post('/log', (req, res) => {
   pushLog(req.body.mess);
 });
-app.get('/logs', (req, res) => {
+app.get('/recentlogs', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
   res.send({
     logs: logs
   });
 });
-
+app.get('/logs', function(request, response) {
+  response.sendFile(__dirname + '/webserver/log.txt');
+});
 
 
 const echo = new e.Echo();
