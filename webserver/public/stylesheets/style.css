@@ -260,7 +260,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 @media (max-width: 598px) {
   /* line 74, ../../sass/styles/messaging.scss */
   .interface {
-    padding: 32px 16px;
+    padding: 8px 16px;
   }
 }
 
