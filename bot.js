@@ -1,5 +1,6 @@
 const discord = require('discord.js');
 const fs = require('fs');
+const commands = require('./commands.js');
 const config = process.argv[2] !== 'glitch' ? JSON.parse(fs.readFileSync('bot-config.json')) : {
   DISCORD_TOKEN: process.env.DISCORD_TOKEN,
   USER: process.env.USER,
@@ -17,11 +18,7 @@ function init(ech) {
   const echo = ech ? ech : new e.Echo();
 
   client.on('ready', function(){
-    echo.app = {
-      client: client,
-      admin: null,
-      server: config.SERVER ? client.guilds.get(config.SERVER) : null,
-    }
+    echo.loadCommand(...commands.discordCommands(client, config.SERVER ? client.guilds.get(config.SERVER) : null));
     echo.addConversation(new conversation.DiscordConversation(client.channels.get(config.CHANNEL), client.user.id));
     //echo.addAdmin(new admin.ConsoleAdminInterface());
 
