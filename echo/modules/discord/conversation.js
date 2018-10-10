@@ -1,21 +1,7 @@
-var events = require('events');
-class Conversation extends events.EventEmitter {
-  constructor(name, echoId) {
-    super();
-    this.name = name;
-    this.echoId = echoId;
-  }
-
-  send(message) {
-  }
-
-  recieve(message, user) {
-    this.emit('message', message, user, this);
-  }
-}
-
 const discord = require('discord.js');
-class DiscordConversation extends Conversation {
+const conversation = require('../../conversation.js');
+
+class DiscordConversation extends conversation.Conversation {
   constructor(channel, botId) {
     super(channel.name, botId);
     this.channel = channel;
@@ -38,6 +24,5 @@ class DiscordConversation extends Conversation {
 }
 
 module.exports = {
-  Conversation: Conversation,
-  DiscordConversation: DiscordConversation,
+  DiscordConversation: DiscordConversation
 }
