@@ -75,11 +75,13 @@
 }
 /* line 66, ../../../sass/styles/messaging.scss */
 .send-message__input {
+  box-sizing: border-box;
   width: 100%;
   border: 1px solid black;
+  border-radius: 0;
 }
 
-/* line 72, ../../../sass/styles/messaging.scss */
+/* line 74, ../../../sass/styles/messaging.scss */
 .interface {
   align-items: center;
   box-sizing: border-box;
@@ -91,13 +93,13 @@
   width: 100vw;
 }
 @media (max-width: 598px) {
-  /* line 72, ../../../sass/styles/messaging.scss */
+  /* line 74, ../../../sass/styles/messaging.scss */
   .interface {
     padding: 32px 16px;
   }
 }
 
-/* line 86, ../../../sass/styles/messaging.scss */
+/* line 88, ../../../sass/styles/messaging.scss */
 .visualizer {
   flex-grow: 1;
   position: relative;
