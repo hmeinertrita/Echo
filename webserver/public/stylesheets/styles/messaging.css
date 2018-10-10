@@ -105,3 +105,11 @@
   flex-grow: 1;
   position: relative;
 }
+
+@media (max-width: 598px) {
+  /* line 94, ../../../sass/styles/messaging.scss */
+  html {
+    position: absolute;
+    bottom: 0;
+  }
+}

@@ -90,3 +90,10 @@ $small-device: 598px;
   flex-grow: 1;
   position: relative;
 }
+
+html {
+  @media (max-width: $small-device) {
+    position: absolute;
+    bottom: 0;
+  }
+}

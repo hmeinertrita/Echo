@@ -271,6 +271,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: relative;
 }
 
+@media (max-width: 598px) {
+  /* line 94, ../../sass/styles/messaging.scss */
+  html {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
 /* line 4, ../../sass/style.scss */
 body, input {
   font-family: 'VT323', monospace;
