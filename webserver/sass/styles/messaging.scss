@@ -4,6 +4,37 @@ $web-width: 390px;
   flex-direction: column;
   max-width: $web-width;
   width: 100%;
+  &__box {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    border: 1px solid;
+    overflow-y: auto;
+  }
+
+  &__default {
+    flex-shrink: 0;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__scroll {
+    height: 24px;
+    background: grey;
+  }
+
+  &__old {
+    background: lightgrey;
+    flex-shrink: 0;
+    list-style: none;
+  }
+
+  &__new {
+    list-style: none;
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 .send-message {
@@ -25,4 +56,9 @@ $web-width: 390px;
   justify-content: space-between;
   padding: 10% 0;
   width: 100vw;
+}
+
+.visualizer {
+  flex-grow: 1;
+  position: relative;
 }

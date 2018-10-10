@@ -5,20 +5,52 @@
   max-width: 390px;
   width: 100%;
 }
+/* line 7, ../../../sass/styles/messaging.scss */
+.messages__box {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  border: 1px solid;
+  overflow-y: auto;
+}
+/* line 15, ../../../sass/styles/messaging.scss */
+.messages__default {
+  flex-shrink: 0;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+/* line 22, ../../../sass/styles/messaging.scss */
+.messages__scroll {
+  height: 24px;
+  background: grey;
+}
+/* line 27, ../../../sass/styles/messaging.scss */
+.messages__old {
+  background: lightgrey;
+  flex-shrink: 0;
+  list-style: none;
+}
+/* line 33, ../../../sass/styles/messaging.scss */
+.messages__new {
+  list-style: none;
+  display: flex;
+  flex-direction: column-reverse;
+}
 
-/* line 9, ../../../sass/styles/messaging.scss */
+/* line 40, ../../../sass/styles/messaging.scss */
 .send-message {
   display: flex;
   flex-direction: column;
   max-width: 390px;
   width: 100%;
 }
-/* line 14, ../../../sass/styles/messaging.scss */
+/* line 45, ../../../sass/styles/messaging.scss */
 .send-message__input {
   width: 100%;
 }
 
-/* line 19, ../../../sass/styles/messaging.scss */
+/* line 50, ../../../sass/styles/messaging.scss */
 .interface {
   align-items: center;
   box-sizing: border-box;
@@ -28,4 +60,10 @@
   justify-content: space-between;
   padding: 10% 0;
   width: 100vw;
+}
+
+/* line 61, ../../../sass/styles/messaging.scss */
+.visualizer {
+  flex-grow: 1;
+  position: relative;
 }

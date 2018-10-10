@@ -29,9 +29,23 @@ $(document).ready(()=> {
     e.preventDefault();
   });
 
-  socket.on('log', function(msg){
-      $('#messages').append($('<li>').text(msg));
+
+  $.get('/logs',{},data => {
+    data.logs.forEach(msg => {
+      $('#old-messages').append($('<li class="-old-message">').text(msg));
     });
+    if (data.logs.length) {$('#default-view').prepend($('<div class="messages__scroll">').text('MSG_HISTORY_SCROLL^'))}
+    var box = document.getElementById("messages");
+    $("#messages").scrollTop(box.scrollHeight-box.clientHeight);
+  })
+
+  socket.on('log', function(msg){
+    $('#new-messages').prepend($('<li>').text(msg));
+    var box = document.getElementById("messages");
+    if ($("#messages").scrollTop() > box.scrollHeight-box.clientHeight-96) {
+      $("#messages").scrollTop(box.scrollHeight-box.clientHeight);
+    }
+  });
 });
 
 function update() {

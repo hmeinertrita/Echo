@@ -61,7 +61,6 @@ class ExpressAdminInterface extends AdminInterface {
 
   addSocket(socket) {
     this.sockets.push(socket);
-    console.log("adding socket! "+this.sockets.length);
     socket.on('recieve', msg => {
       super.recieve(msg);
     });
