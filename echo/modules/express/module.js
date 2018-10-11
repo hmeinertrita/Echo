@@ -1,5 +1,6 @@
 const express = require('express');
 const admin = require('./admin.js');
+const socketCommands = require('./commands.js');
 
 function init(e) {
   //Initialize express server
@@ -32,10 +33,15 @@ function init(e) {
   const sockets = [];
   const interface = (new admin.ExpressAdminInterface(app, pushLog));
   e.addAdmin(interface);
+  e.loadCommand(...socketCommands);
+  e.commandCenter.commands['profile'].addCommand(e.commandCenter.commands['express-profile']);
 
   io.on('connection', function(socket){
     sockets.push(socket);
     interface.addSocket(socket);
+    socketCommands.forEach(command => {
+      command.addSocket(socket);
+    });
   });
 
   app.get('/', function(request, response) {

@@ -1,5 +1,5 @@
 const commands = require('../../commands.js');
-const discordConversations = require('../../commands.js');
+const discordConversations = require('./conversation.js');
 
 module.exports = (client, server) => {
   const discordProfile = new commands.Command('discord-profile', function() {

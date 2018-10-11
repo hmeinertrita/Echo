@@ -45,6 +45,11 @@ $(document).ready(()=> {
       $("#messages").scrollTop(box.scrollHeight-box.clientHeight);
     }
   });
+
+  socket.on('profile', function(profile){
+    $('.sidebar__name').text(profile.nickname);
+    $('.sidebar__avatar').attr('src', 'images/'+profile.avatar);
+  });
 });
 
 function update() {
