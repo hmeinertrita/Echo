@@ -30,8 +30,50 @@ class Command {
   }
 }
 
+class CompositeCommand extends Command {
+  constructor(invoker) {
+    var execute = function (...params) {
+      console.log('executing composite command with params ' + params);
+      const executables = getExecutables(params);
+      for (let executable of executables) {
+        executable.execute.call(this, executable.params);
+      }
+    };
+    super(invoker, execute);
+
+    this.params = {};
+    this.commands = [];
+    const getExecutables = (...params) => {
+      console.log('building executables with default params ' + params);
+      const executables = [];
+      for (let command of this.commands) {
+        console.log(this.params);
+        var p = this.params[command.invoker].length ? this.params[command.invoker] : params;
+        console.log('pushing executable '+command.invoker+' with params' + p);
+        executables.push({
+          execute: command.execute,
+          params: p
+        });
+      }
+      return executables
+    }
+  }
+  addCommand(command, ...params) {
+    this.commands.push(command);
+    this.params[command.invoker] = params;
+  }
+}
+
+const loadProfile = new Command('load-profile', function(profileName) {
+  this.profile = JSON.parse(fs.readFileSync(this.profilePath + profileName + '/profile.json'));
+  this.log("Loaded Profile: "+this.profile.nickname);
+});
+
+const changeProfile = new CompositeCommand('profile');
+changeProfile.addCommand(loadProfile);
 
 module.exports = {
   CommandCenter: CommandCenter,
-  Command: Command
+  Command: Command,
+  changeProfileCommand: changeProfile
 }

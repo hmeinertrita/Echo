@@ -3,14 +3,17 @@ const fs = require('fs');
 const commands = require('./commands.js');
 const admin = require('./admin.js');
 
+
 class Echo extends events.EventEmitter {
   constructor(initializeConsole) {
     super();
+    this.profilePath = './profiles/';
     this.commandCenter = new commands.CommandCenter();
     this.stream = fs.createWriteStream(__dirname + "/logs/log.txt", {flags:'a'});
     if (initializeConsole) {
       this.addAdmin(new admin.ConsoleAdminInterface());
     }
+    this.commandCenter.addCommand(commands.changeProfileCommand);
   }
 
   loadModule(module) {
