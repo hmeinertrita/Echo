@@ -1,5 +1,27 @@
 $web-width: 390px;
 $small-device: 598px;
+
+.row {
+  box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  padding: 10% 0;
+  width: 100vw;
+  @media (max-width: $small-device) {
+    padding: 16px;
+    height: 80vw;
+  }
+}
+
+.interface {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%
+}
+
 .messages {
   display: flex;
   flex-direction: column;
@@ -72,20 +94,6 @@ $small-device: 598px;
   }
 }
 
-.interface {
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: space-between;
-  padding: 10% 0;
-  width: 100vw;
-  @media (max-width: $small-device) {
-    padding: 16px;
-    height: 80vw;
-  }
-}
 
 .visualizer {
   flex-grow: 1;

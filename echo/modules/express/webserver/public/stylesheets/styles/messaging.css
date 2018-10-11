@@ -1,11 +1,37 @@
-/* line 3, ../../../sass/styles/messaging.scss */
+/* line 4, ../../../sass/styles/messaging.scss */
+.row {
+  box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  padding: 10% 0;
+  width: 100vw;
+}
+@media (max-width: 598px) {
+  /* line 4, ../../../sass/styles/messaging.scss */
+  .row {
+    padding: 16px;
+    height: 80vw;
+  }
+}
+
+/* line 17, ../../../sass/styles/messaging.scss */
+.interface {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* line 25, ../../../sass/styles/messaging.scss */
 .messages {
   display: flex;
   flex-direction: column;
   max-width: 390px;
   width: 100%;
 }
-/* line 8, ../../../sass/styles/messaging.scss */
+/* line 30, ../../../sass/styles/messaging.scss */
 .messages__box {
   display: flex;
   flex-direction: column;
@@ -14,12 +40,12 @@
   overflow-y: auto;
 }
 @media (max-width: 598px) {
-  /* line 8, ../../../sass/styles/messaging.scss */
+  /* line 30, ../../../sass/styles/messaging.scss */
   .messages__box {
     height: 40vw;
   }
 }
-/* line 19, ../../../sass/styles/messaging.scss */
+/* line 41, ../../../sass/styles/messaging.scss */
 .messages__default {
   flex-shrink: 0;
   min-height: 200px;
@@ -27,54 +53,54 @@
   flex-direction: column;
 }
 @media (max-width: 598px) {
-  /* line 19, ../../../sass/styles/messaging.scss */
+  /* line 41, ../../../sass/styles/messaging.scss */
   .messages__default {
     min-height: 40vw;
   }
 }
-/* line 29, ../../../sass/styles/messaging.scss */
+/* line 51, ../../../sass/styles/messaging.scss */
 .messages__scroll {
   height: 24px;
   background: rgba(0, 0, 0, 0.5);
 }
-/* line 34, ../../../sass/styles/messaging.scss */
+/* line 56, ../../../sass/styles/messaging.scss */
 .messages__old {
   background: rgba(0, 0, 0, 0.3);
   flex-shrink: 0;
   list-style: none;
   backdrop-filter: blur(1px);
 }
-/* line 41, ../../../sass/styles/messaging.scss */
+/* line 63, ../../../sass/styles/messaging.scss */
 .messages__new {
   list-style: none;
   display: flex;
   flex-direction: column-reverse;
 }
-/* line 47, ../../../sass/styles/messaging.scss */
+/* line 69, ../../../sass/styles/messaging.scss */
 .messages__logs {
   display: flex;
   flex-direction: column;
 }
-/* line 51, ../../../sass/styles/messaging.scss */
+/* line 73, ../../../sass/styles/messaging.scss */
 .messages__link {
   color: white;
   background: rgba(0, 0, 0, 0.7);
   text-decoration: none;
 }
-/* line 55, ../../../sass/styles/messaging.scss */
+/* line 77, ../../../sass/styles/messaging.scss */
 .messages__link:visited {
   color: white;
   text-decoration: none;
 }
 
-/* line 62, ../../../sass/styles/messaging.scss */
+/* line 84, ../../../sass/styles/messaging.scss */
 .send-message {
   display: flex;
   flex-direction: column;
   max-width: 390px;
   width: 100%;
 }
-/* line 67, ../../../sass/styles/messaging.scss */
+/* line 89, ../../../sass/styles/messaging.scss */
 .send-message__input {
   box-sizing: border-box;
   width: 100%;
@@ -82,32 +108,13 @@
   border-radius: 0;
 }
 
-/* line 75, ../../../sass/styles/messaging.scss */
-.interface {
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: space-between;
-  padding: 10% 0;
-  width: 100vw;
-}
-@media (max-width: 598px) {
-  /* line 75, ../../../sass/styles/messaging.scss */
-  .interface {
-    padding: 16px;
-    height: 80vw;
-  }
-}
-
-/* line 90, ../../../sass/styles/messaging.scss */
+/* line 98, ../../../sass/styles/messaging.scss */
 .visualizer {
   flex-grow: 1;
   position: relative;
 }
 @media (max-width: 598px) {
-  /* line 90, ../../../sass/styles/messaging.scss */
+  /* line 98, ../../../sass/styles/messaging.scss */
   .visualizer {
     filter: blur(1px);
     position: absolute;
@@ -118,7 +125,7 @@
 }
 
 @media (max-width: 598px) {
-  /* line 102, ../../../sass/styles/messaging.scss */
+  /* line 110, ../../../sass/styles/messaging.scss */
   html {
     position: absolute;
     bottom: 0;
