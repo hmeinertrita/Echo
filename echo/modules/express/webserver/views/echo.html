@@ -9,75 +9,35 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
   <body>
-    <div class="interface">
-      <div class="messages">
-        <h2 class="messages__header">RECEIVED_COMMS:</h2>
-        <div class="messages__box" id="messages">
-          <ul class="messages__old" id="old-messages">
-            <li class="messages__logs">
-              <a class="messages__link" href="/logs">VIEW_COMPLETE_LOGS&#60;&#60;&#60;CLICK</a>
-            </li>
-          </ul>
-          <div class="messages__default" id="default-view">
-            <div class="messages__scroll">MSG_HISTORY_SCROLL^</div>
-            <ul class="messages__new" id="new-messages"></ul>
-          </div>
-        </div>
+    <div class="row">
+      <div class="sidebar">
+        <img src="" alt="Avatar" class="sidebar__avatar">
+        <div class="sidebar__name">JOHN LONGNAME</div>
       </div>
-
-      <div class="visualizer">
-        <div class="polyhedron">
-          <div class="vertex vertex__0">
-            <div class="edge edge__0"></div>
-            <div class="edge edge__1"></div>
-            <div class="edge edge__2"></div>
-          </div>
-          <div class="vertex vertex__1">
-            <div class="edge edge__0"></div>
-            <div class="edge edge__1"></div>
-            <div class="edge edge__2"></div>
-          </div>
-          <div class="vertex vertex__2">
-            <div class="edge edge__0"></div>
-            <div class="edge edge__1"></div>
-            <div class="edge edge__2"></div>
-          </div>
-          <div class="vertex vertex__3">
-            <div class="edge edge__0"></div>
-            <div class="edge edge__1"></div>
-            <div class="edge edge__2"></div>
+      <div class="interface">
+        <div class="messages">
+          <h2 class="messages__header">RECEIVED_COMMS:</h2>
+          <div class="messages__box" id="messages">
+            <ul class="messages__old" id="old-messages">
+              <li class="messages__logs">
+                <a class="messages__link" href="/logs">VIEW_COMPLETE_LOGS&#60;&#60;&#60;CLICK</a>
+              </li>
+            </ul>
+            <div class="messages__default" id="default-view">
+              <div class="messages__scroll">MSG_HISTORY_SCROLL^</div>
+              <ul class="messages__new" id="new-messages"></ul>
+            </div>
           </div>
         </div>
-        <div class="polyhedron base">
-          <div class="vertex vertex__0 base">
-            <div class="edge edge__0 base"></div>
-            <div class="edge edge__1 base"></div>
-            <div class="edge edge__2 base"></div>
-          </div>
-          <div class="vertex vertex__1 base">
-            <div class="edge edge__0 base"></div>
-            <div class="edge edge__1 base"></div>
-            <div class="edge edge__2 base"></div>
-          </div>
-          <div class="vertex vertex__2 base">
-            <div class="edge edge__0 base"></div>
-            <div class="edge edge__1 base"></div>
-            <div class="edge edge__2 base"></div>
-          </div>
-          <div class="vertex vertex__3 base">
-            <div class="edge edge__0 base"></div>
-            <div class="edge edge__1 base"></div>
-            <div class="edge edge__2 base"></div>
-          </div>
+
+        <div class="visualizer" id="visualizer"></div>
+
+        <div class="send-message">
+          <label for='mess' class='send-message__label'>SEND_MESSAGE:</label>
+          <form id="message-form">
+            <input class='send-message__input' type="text" id="input" name="mess">
+          </form>
         </div>
-      </div>
-
-
-      <div class="send-message">
-        <label for='mess' class='send-message__label'>SEND_MESSAGE:</label>
-        <form id="message-form">
-          <input class='send-message__input' type="text" id="input" name="mess">
-        </form>
       </div>
     </div>
 

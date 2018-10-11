@@ -1,5 +1,6 @@
 const edgeLength = 100;
 const toRad = Math.PI/180;
+const vertexCount = 4;
 const edgeCount = 3;
 const edgeBaseAngle = 360/edgeCount*toRad;
 const edgeCircumRadius = 0.5*edgeLength/Math.sin(0.5*edgeBaseAngle);
@@ -33,3 +34,22 @@ function updateVertex(addedLength, vertex) {
   setEdgeAngle(addedLength, vertex);
   setVertexTranslate(addedLength, vertex);
 }
+
+function createPolyhedron(vertices, sides, ...classes) {
+  const classString = classes.join(' ');
+  const poly = $('<div class="polyhedron '+classString+'">')
+  for (var i=0; i<vertices; i++) {
+    var vertex = $('<div class="vertex vertex__'+i+' '+classString+'">');
+    for (var j=0; j<sides; j++) {
+      vertex.append($('<div class="edge edge__'+j+' '+classString+'">'));
+    }
+    poly.append(vertex);
+  }
+  return poly;
+}
+
+$(document).ready(() => {
+  const visualizer = $('#visualizer');
+  visualizer.append(createPolyhedron(vertexCount, edgeCount, 'base'));
+  visualizer.append(createPolyhedron(vertexCount, edgeCount));
+});

@@ -8,7 +8,7 @@ function init(e) {
   const io = require('socket.io')(http);
   app.use(express.urlencoded());
   app.use(express.json());
-  app.use(express.static('webserver/public'));
+  app.use(express.static(__dirname + '/webserver/public'));
 
   //handle logging
   const logs = [];
