@@ -17,7 +17,9 @@ function init(e) {
   const echo = e;
 
   client.on('ready', function(){
-    echo.loadCommand(...commands(client, config.SERVER ? client.guilds.get(config.SERVER) : null));
+    const discordCommands = commands(client, config.SERVER ? client.guilds.get(config.SERVER) : null);
+    echo.loadCommand(...discordCommands);
+    echo.commandCenter.commands['profile'].addCommand(echo.commandCenter.commands['discord-profile']);
     echo.addConversation(new conversation.DiscordConversation(client.channels.get(config.CHANNEL), client.user.id));
 
     echo.log("Discord Client ready");
