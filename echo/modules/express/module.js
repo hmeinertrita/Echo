@@ -13,7 +13,7 @@ function init(e) {
 
   //handle logging
   const logs = [];
-  var stream = fs.createWriteStream("webserver/log.txt", {flags:'a'});
+  var stream = fs.createWriteStream(__dirname + "/webserver/log.txt", {flags:'a'});
   function pushLog(logMessage) {
     logs.push(logMessage);
     stream.write((new Date()).toUTCString() + " ------ " + logMessage + "\n");
