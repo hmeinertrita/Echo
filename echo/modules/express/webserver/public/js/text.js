@@ -24,7 +24,7 @@ $(document).ready(()=> {
   $('#message-form').submit(function(e) {
     var data = {mess: $('#input').val()};
     socket.emit('recieve', data.mess);
-    $('#messages').append($('<li>').text(data.mess));
+    $('#new-messages').prepend($('<li>').text(data.mess));
     $('#input').val('');
     e.preventDefault();
   });
