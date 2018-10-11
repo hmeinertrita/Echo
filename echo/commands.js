@@ -33,7 +33,6 @@ class Command {
 class CompositeCommand extends Command {
   constructor(invoker) {
     var execute = function (...params) {
-      console.log('executing composite command with params ' + params);
       const executables = getExecutables(params);
       for (let executable of executables) {
         executable.execute.call(this, executable.params);
@@ -44,12 +43,9 @@ class CompositeCommand extends Command {
     this.params = {};
     this.commands = [];
     const getExecutables = (...params) => {
-      console.log('building executables with default params ' + params);
       const executables = [];
       for (let command of this.commands) {
-        console.log(this.params);
         var p = this.params[command.invoker].length ? this.params[command.invoker] : params;
-        console.log('pushing executable '+command.invoker+' with params' + p);
         executables.push({
           execute: command.execute,
           params: p
