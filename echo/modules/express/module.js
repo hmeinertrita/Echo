@@ -13,7 +13,7 @@ function init(e) {
 
   //handle logging
   const logs = [];
-  var stream = fs.createWriteStream(__dirname + "/webserver/log.txt", {flags:'a'});
+  var stream = fs.createWriteStream(__dirname + "/../../logs/log.txt", {flags:'a'});
   function pushLog(logMessage) {
     logs.push(logMessage);
     stream.write((new Date()).toUTCString() + " ------ " + logMessage + "\n");
@@ -28,7 +28,7 @@ function init(e) {
     });
   });
   app.get('/logs', function(request, response) {
-    response.sendFile(__dirname + '/webserver/log.txt');
+    response.sendFile(__dirname + "/../../logs/log.txt");
   });
 
 
