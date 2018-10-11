@@ -87,6 +87,4 @@ class Echo extends events.EventEmitter {
   }
 }
 
-module.exports = {
-  Echo: Echo
-}
+module.exports = Echo;
