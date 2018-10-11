@@ -31,7 +31,7 @@ function init(e) {
       initialized = true;
     }
   });
-  client.login(config.DISCORD_TOKEN);
+  client.login(config.DISCORD_TOKEN).catch(error => {e.log(`Couldn't log into Discord because ${error}`)});
 }
 
 module.exports = init;
