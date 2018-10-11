@@ -27,10 +27,19 @@ class SocketCommand extends commands.Command {
   }
 }
 
-const expressProfile = new SocketCommand('express-profile', socket => {
-  return function() {
-    socket.emit('profile', this.profile);
-  };
-});
+module.exports = (path) => {
+  const copyAvatar = new commands.Command("copy-avatar", function() {
+    const src = this.profilePath + this.profile.id + '/' + this.profile.avatar;
+    const dest = __dirname + path;
+    this.log('copying avatar to webserver...');
+    //copy to dest
+  });
 
-module.exports = [expressProfile];
+  const socketProfile = new SocketCommand('socket-profile', socket => {
+    return function() {
+      socket.emit('profile', this.profile);
+    };
+  });
+
+  return [copyAvatar, socketProfile];
+};

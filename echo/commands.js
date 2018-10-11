@@ -71,5 +71,6 @@ changeProfile.addCommand(loadProfile);
 module.exports = {
   CommandCenter: CommandCenter,
   Command: Command,
+  CompositeCommand: CompositeCommand,
   changeProfileCommand: changeProfile
 }
