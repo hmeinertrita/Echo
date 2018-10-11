@@ -6,7 +6,7 @@ $small-device: 598px;
   display: flex;
   height: 100vh;
   justify-content: space-between;
-  padding: 10% 0;
+  padding: 64px 32px;
   width: 100vw;
   @media (max-width: $small-device) {
     padding: 16px;
@@ -18,14 +18,15 @@ $small-device: 598px;
   align-items: center;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   justify-content: space-between;
+  max-width: $web-width;
   width: 100%
 }
 
 .messages {
   display: flex;
   flex-direction: column;
-  max-width: $web-width;
   width: 100%;
   &__box {
     display: flex;
@@ -84,7 +85,6 @@ $small-device: 598px;
 .send-message {
   display: flex;
   flex-direction: column;
-  max-width: $web-width;
   width: 100%;
   &__input {
     box-sizing: border-box;
@@ -92,6 +92,11 @@ $small-device: 598px;
     border: 1px solid black;
     border-radius: 0;
   }
+}
+
+.sidebar {
+  width: 100%;
+  max-width: $web-width;
 }
 
 
