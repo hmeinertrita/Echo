@@ -1,10 +1,14 @@
 var events = require('events');
 const commands = require('./commands.js');
+const admin = require('./admin.js');
 
 class Echo extends events.EventEmitter {
-  constructor() {
+  constructor(initializeConsole) {
     super();
     this.commandCenter = new commands.CommandCenter();
+    if (initializeConsole) {
+      this.addAdmin(new admin.ConsoleAdminInterface());
+    }
   }
 
   //============================================================================
