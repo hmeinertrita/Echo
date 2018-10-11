@@ -1,6 +1,5 @@
 const express = require('express');
 const admin = require('./admin.js');
-const fs = require('fs');
 
 function init(e) {
   //Initialize express server
@@ -13,10 +12,8 @@ function init(e) {
 
   //handle logging
   const logs = [];
-  var stream = fs.createWriteStream(__dirname + "/../../logs/log.txt", {flags:'a'});
   function pushLog(logMessage) {
     logs.push(logMessage);
-    stream.write((new Date()).toUTCString() + " ------ " + logMessage + "\n");
   }
   app.post('/log', (req, res) => {
     pushLog(req.body.mess);

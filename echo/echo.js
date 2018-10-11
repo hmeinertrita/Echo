@@ -1,4 +1,5 @@
 var events = require('events');
+const fs = require('fs');
 const commands = require('./commands.js');
 const admin = require('./admin.js');
 
@@ -6,6 +7,7 @@ class Echo extends events.EventEmitter {
   constructor(initializeConsole) {
     super();
     this.commandCenter = new commands.CommandCenter();
+    this.stream = fs.createWriteStream(__dirname + "/logs/log.txt", {flags:'a'});
     if (initializeConsole) {
       this.addAdmin(new admin.ConsoleAdminInterface());
     }
@@ -82,6 +84,7 @@ class Echo extends events.EventEmitter {
 
   //* Log a message to all admin interfaces
   log(message) {
+    this.stream.write((new Date()).toUTCString() + " ------ " + message + "\n");
     this.emit('log', message);
   }
 
