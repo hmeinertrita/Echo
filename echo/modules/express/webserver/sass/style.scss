@@ -1,7 +1,33 @@
 @import 'styles/visualizer';
 @import 'styles/messaging';
 @import url('https://fonts.googleapis.com/css?family=VT323');
-body, input {
+
+$input-height: 40px;
+
+* {
+  box-sizing: border-box;
+}
+
+body, input, select {
   font-family: 'VT323', monospace;
   font-size: 24px;
+}
+
+input, select {
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 0;
+  height: $input-height;
+  padding: 0 12px;
+}
+
+select {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input {
+  width: 100%;
 }

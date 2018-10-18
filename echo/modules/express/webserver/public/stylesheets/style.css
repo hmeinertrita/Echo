@@ -265,21 +265,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   max-width: 390px;
   width: 100%;
 }
-/* line 89, ../../sass/styles/messaging.scss */
-.send-message__input {
-  box-sizing: border-box;
-  width: 100%;
-  border: 1px solid black;
-  border-radius: 0;
-}
 
-/* line 98, ../../sass/styles/messaging.scss */
+/* line 91, ../../sass/styles/messaging.scss */
 .visualizer {
   flex-grow: 1;
   position: relative;
 }
 @media (max-width: 598px) {
-  /* line 98, ../../sass/styles/messaging.scss */
+  /* line 91, ../../sass/styles/messaging.scss */
   .visualizer {
     filter: blur(1px);
     position: absolute;
@@ -289,16 +282,62 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 
+/* line 103, ../../sass/styles/messaging.scss */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  padding: 24px;
+}
+
+/* line 110, ../../sass/styles/messaging.scss */
+.conversation-input {
+  align-items: center;
+  display: flex;
+  margin-top: 16px;
+}
+/* line 114, ../../sass/styles/messaging.scss */
+.conversation-input__label {
+  margin-left: 8px;
+}
+
 @media (max-width: 598px) {
-  /* line 110, ../../sass/styles/messaging.scss */
+  /* line 119, ../../sass/styles/messaging.scss */
   html {
     position: absolute;
     bottom: 0;
   }
 }
 
-/* line 4, ../../sass/style.scss */
-body, input {
+/* line 7, ../../sass/style.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 11, ../../sass/style.scss */
+body, input, select {
   font-family: 'VT323', monospace;
   font-size: 24px;
+}
+
+/* line 16, ../../sass/style.scss */
+input, select {
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 0;
+  height: 40px;
+  padding: 0 12px;
+}
+
+/* line 24, ../../sass/style.scss */
+select {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* line 31, ../../sass/style.scss */
+input {
+  width: 100%;
 }
