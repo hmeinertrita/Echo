@@ -1,27 +1,46 @@
-@import 'styles/visualizer';
-@import 'styles/messaging';
+@import "compass/reset";
+@import 'vars/colours';
 @import url('https://fonts.googleapis.com/css?family=VT323');
 
 $input-height: 40px;
+$border-main: 1px solid $border-primary;
+$web-width: 390px;
+$small-device: 598px;
 
 * {
   box-sizing: border-box;
 }
 
-body, input, select {
-  font-family: 'VT323', monospace;
+html {
+  background: $background;
+  width: 100%;
+  @media (max-width: $small-device) {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+body, input, select, button {
+  color: $font-primary;
+  font-family: 'VT323', monospace !important;
   font-size: 24px;
 }
 
-input, select {
+input, select, button {
   background: transparent;
-  border: 1px solid black;
+  border: $border-main;
   border-radius: 0;
   height: $input-height;
   padding: 0 12px;
 }
 
-select {
+select, button {
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -31,3 +50,19 @@ select {
 input {
   width: 100%;
 }
+
+a {
+  color: $font-primary;
+  text-decoration: none;
+  a:visited {
+    color: $font-primary;
+    text-decoration: none;
+  }
+}
+
+.--append-input {
+  border-left: 0;
+}
+
+@import '../styles/visualizer';
+@import '../styles/messaging';
