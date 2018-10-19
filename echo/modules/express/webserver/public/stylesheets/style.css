@@ -1,7 +1,3 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import url("https://fonts.googleapis.com/css?family=VT323");
 /* line 5, ../../../../../../../../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
@@ -68,7 +64,77 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 8, ../../sass/styles/visualizer.scss */
+/* line 10, ../../sass/style.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 14, ../../sass/style.scss */
+html {
+  background: #000;
+  width: 100%;
+}
+@media (max-width: 598px) {
+  /* line 14, ../../sass/style.scss */
+  html {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+/* line 23, ../../sass/style.scss */
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 29, ../../sass/style.scss */
+body, input, select, button {
+  color: #fff;
+  font-family: 'VT323', monospace !important;
+  font-size: 24px;
+}
+
+/* line 35, ../../sass/style.scss */
+input, select, button {
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 0;
+  height: 40px;
+  padding: 0 12px;
+}
+
+/* line 43, ../../sass/style.scss */
+select, button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* line 50, ../../sass/style.scss */
+input {
+  width: 100%;
+}
+
+/* line 54, ../../sass/style.scss */
+a {
+  color: #fff;
+  text-decoration: none;
+}
+/* line 57, ../../sass/style.scss */
+a a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 63, ../../sass/style.scss */
+.--append-input {
+  border-left: 0;
+}
+
+/* line 1, ../../styles/visualizer.scss */
 .canvas {
   align-items: center;
   justify-content: center;
@@ -78,7 +144,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 100vh;
 }
 
-/* line 35, ../../sass/styles/visualizer.scss */
+/* line 28, ../../styles/visualizer.scss */
 .polyhedron {
   position: absolute;
   top: 50%;
@@ -111,7 +177,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
   }
 }
-/* line 79, ../../sass/styles/visualizer.scss */
+/* line 72, ../../styles/visualizer.scss */
 .edge {
   box-sizing: content-box;
   transform-style: preserve-3d;
@@ -122,48 +188,48 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transform-origin: top left;
   --angle: 2.18628rad;
 }
-/* line 89, ../../sass/styles/visualizer.scss */
+/* line 82, ../../styles/visualizer.scss */
 .edge.base {
   border: 1px solid blue;
 }
-/* line 94, ../../sass/styles/visualizer.scss */
+/* line 87, ../../styles/visualizer.scss */
 .edge__0 {
   transform: rotateZ(0deg) rotateY(var(--angle));
 }
-/* line 94, ../../sass/styles/visualizer.scss */
+/* line 87, ../../styles/visualizer.scss */
 .edge__1 {
   transform: rotateZ(120deg) rotateY(var(--angle));
 }
-/* line 94, ../../sass/styles/visualizer.scss */
+/* line 87, ../../styles/visualizer.scss */
 .edge__2 {
   transform: rotateZ(240deg) rotateY(var(--angle));
 }
 
-/* line 100, ../../sass/styles/visualizer.scss */
+/* line 93, ../../styles/visualizer.scss */
 .vertex {
   position: absolute;
   transform-style: preserve-3d;
   transform-origin: top left;
   --translate: 61.23724px;
 }
-/* line 106, ../../sass/styles/visualizer.scss */
+/* line 99, ../../styles/visualizer.scss */
 .vertex__0 {
   transform: rotateZ(-60deg) translateZ(var(--translate));
 }
-/* line 110, ../../sass/styles/visualizer.scss */
+/* line 103, ../../styles/visualizer.scss */
 .vertex__1 {
   transform: rotateZ(0deg) rotateY(1.91063rad) translateZ(var(--translate));
 }
-/* line 110, ../../sass/styles/visualizer.scss */
+/* line 103, ../../styles/visualizer.scss */
 .vertex__2 {
   transform: rotateZ(120deg) rotateY(1.91063rad) translateZ(var(--translate));
 }
-/* line 110, ../../sass/styles/visualizer.scss */
+/* line 103, ../../styles/visualizer.scss */
 .vertex__3 {
   transform: rotateZ(240deg) rotateY(1.91063rad) translateZ(var(--translate));
 }
 
-/* line 4, ../../sass/styles/messaging.scss */
+/* line 1, ../../styles/messaging.scss */
 .row {
   box-sizing: border-box;
   display: flex;
@@ -173,30 +239,42 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 100vw;
 }
 @media (max-width: 598px) {
-  /* line 4, ../../sass/styles/messaging.scss */
+  /* line 1, ../../styles/messaging.scss */
   .row {
-    padding: 16px;
-    height: 80vw;
+    flex-direction: column;
+    height: 65vw;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 16px 16px 16px 48px;
+    max-width: 390px;
+    width: calc(100vw - 64px);
   }
 }
 
-/* line 17, ../../sass/styles/messaging.scss */
+/* line 19, ../../styles/messaging.scss */
 .interface {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 390px;
   width: 100%;
 }
+@media (max-width: 598px) {
+  /* line 19, ../../styles/messaging.scss */
+  .interface {
+    flex-shrink: 0;
+  }
+}
 
-/* line 25, ../../sass/styles/messaging.scss */
+/* line 31, ../../styles/messaging.scss */
 .messages {
   display: flex;
   flex-direction: column;
   max-width: 390px;
   width: 100%;
 }
-/* line 30, ../../sass/styles/messaging.scss */
+/* line 36, ../../styles/messaging.scss */
 .messages__box {
   display: flex;
   flex-direction: column;
@@ -205,12 +283,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   overflow-y: auto;
 }
 @media (max-width: 598px) {
-  /* line 30, ../../sass/styles/messaging.scss */
+  /* line 36, ../../styles/messaging.scss */
   .messages__box {
     height: 40vw;
   }
 }
-/* line 41, ../../sass/styles/messaging.scss */
+@media (max-width: 598px) {
+  /* line 47, ../../styles/messaging.scss */
+  .messages__header {
+    display: none;
+  }
+}
+/* line 53, ../../styles/messaging.scss */
 .messages__default {
   flex-shrink: 0;
   min-height: 200px;
@@ -218,87 +302,131 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   flex-direction: column;
 }
 @media (max-width: 598px) {
-  /* line 41, ../../sass/styles/messaging.scss */
+  /* line 53, ../../styles/messaging.scss */
   .messages__default {
     min-height: 40vw;
   }
 }
-/* line 51, ../../sass/styles/messaging.scss */
+/* line 63, ../../styles/messaging.scss */
 .messages__scroll {
   height: 24px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.2);
 }
-/* line 56, ../../sass/styles/messaging.scss */
+/* line 68, ../../styles/messaging.scss */
 .messages__old {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   flex-shrink: 0;
   list-style: none;
   backdrop-filter: blur(1px);
 }
-/* line 63, ../../sass/styles/messaging.scss */
+/* line 75, ../../styles/messaging.scss */
 .messages__new {
   list-style: none;
   display: flex;
   flex-direction: column-reverse;
 }
-/* line 69, ../../sass/styles/messaging.scss */
+/* line 81, ../../styles/messaging.scss */
 .messages__logs {
   display: flex;
   flex-direction: column;
 }
-/* line 73, ../../sass/styles/messaging.scss */
+/* line 85, ../../styles/messaging.scss */
 .messages__link {
-  color: white;
-  background: rgba(0, 0, 0, 0.7);
-  text-decoration: none;
-}
-/* line 77, ../../sass/styles/messaging.scss */
-.messages__link:visited {
-  color: white;
-  text-decoration: none;
+  border-bottom: 1px solid #fff;
 }
 
-/* line 84, ../../sass/styles/messaging.scss */
+/* line 90, ../../styles/messaging.scss */
 .send-message {
   display: flex;
   flex-direction: column;
   max-width: 390px;
   width: 100%;
 }
-/* line 89, ../../sass/styles/messaging.scss */
-.send-message__input {
-  box-sizing: border-box;
-  width: 100%;
-  border: 1px solid black;
-  border-radius: 0;
-}
 
-/* line 98, ../../sass/styles/messaging.scss */
+/* line 97, ../../styles/messaging.scss */
 .visualizer {
   flex-grow: 1;
   position: relative;
 }
 @media (max-width: 598px) {
-  /* line 98, ../../sass/styles/messaging.scss */
+  /* line 97, ../../styles/messaging.scss */
   .visualizer {
     filter: blur(1px);
     position: absolute;
     top: 40%;
     left: 50%;
+    margin-left: 16px;
     z-index: -1000;
   }
 }
 
+/* line 110, ../../styles/messaging.scss */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  max-width: 390px;
+  min-width: 100px;
+  padding: 24px;
+}
 @media (max-width: 598px) {
-  /* line 110, ../../sass/styles/messaging.scss */
-  html {
-    position: absolute;
-    bottom: 0;
+  /* line 110, ../../styles/messaging.scss */
+  .sidebar {
+    flex-shrink: 0;
+    padding: 0;
   }
 }
+/* line 122, ../../styles/messaging.scss */
+.sidebar.--account {
+  align-items: center;
+}
+@media (max-width: 598px) {
+  /* line 122, ../../styles/messaging.scss */
+  .sidebar.--account {
+    margin-left: -48px;
+    flex-direction: row;
+  }
+}
+@media (max-width: 598px) {
+  /* line 130, ../../styles/messaging.scss */
+  .sidebar.--conversations {
+    display: none;
+  }
+}
+/* line 136, ../../styles/messaging.scss */
+.sidebar__avatar {
+  height: 64px;
+  width: 64px;
+}
+@media (max-width: 598px) {
+  /* line 136, ../../styles/messaging.scss */
+  .sidebar__avatar {
+    height: 32px;
+    margin: 0 8px;
+    width: 32px;
+  }
+}
+/* line 146, ../../styles/messaging.scss */
+.sidebar__name {
+  text-align: center;
+}
 
-/* line 4, ../../sass/style.scss */
-body, input {
-  font-family: 'VT323', monospace;
-  font-size: 24px;
+/* line 151, ../../styles/messaging.scss */
+.conversation-select {
+  align-self: stretch;
+}
+
+/* line 155, ../../styles/messaging.scss */
+.conversation-input {
+  align-items: center;
+  display: flex;
+  margin-top: 16px;
+}
+/* line 159, ../../styles/messaging.scss */
+.conversation-input__label {
+  margin-left: 8px;
+}
+
+/* line 164, ../../styles/messaging.scss */
+.-new-message {
+  background: transparent;
 }

@@ -1,6 +1,3 @@
-$web-width: 390px;
-$small-device: 598px;
-
 .row {
   box-sizing: border-box;
   display: flex;
@@ -9,8 +6,13 @@ $small-device: 598px;
   padding: 64px 32px;
   width: 100vw;
   @media (max-width: $small-device) {
-    padding: 16px;
-    height: 80vw;
+    flex-direction: column;
+    height: 65vw;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 16px 16px 16px 48px;
+    max-width: $web-width;
+    width: calc(100vw - 64px);
   }
 }
 
@@ -21,7 +23,10 @@ $small-device: 598px;
   flex-shrink: 0;
   justify-content: space-between;
   max-width: $web-width;
-  width: 100%
+  width: 100%;
+  @media (max-width: $small-device) {
+    flex-shrink: 0;
+  }
 }
 
 .messages {
@@ -39,6 +44,12 @@ $small-device: 598px;
     }
   }
 
+  &__header {
+    @media (max-width: $small-device) {
+      display: none;
+    }
+  }
+
   &__default {
     flex-shrink: 0;
     min-height: 200px;
@@ -51,11 +62,11 @@ $small-device: 598px;
 
   &__scroll {
     height: 24px;
-    background: rgba(0,0,0,0.5);
+    background: $message-old;
   }
 
   &__old {
-    background: rgba(0,0,0,0.3);
+    background: $message-old;
     flex-shrink: 0;
     list-style: none;
     backdrop-filter: blur(1px);
@@ -72,13 +83,7 @@ $small-device: 598px;
     flex-direction: column;
   }
   &__link {
-    color: white;
-    background: rgba(0,0,0,0.7);
-    text-decoration: none;
-    &:visited {
-      color: white;
-      text-decoration: none;
-    }
+    border-bottom: $border-main;
   }
 }
 
@@ -86,19 +91,7 @@ $small-device: 598px;
   display: flex;
   flex-direction: column;
   width: 100%;
-  &__input {
-    box-sizing: border-box;
-    width: 100%;
-    border: 1px solid black;
-    border-radius: 0;
-  }
 }
-
-.sidebar {
-  width: 100%;
-  max-width: $web-width;
-}
-
 
 .visualizer {
   flex-grow: 1;
@@ -108,13 +101,65 @@ $small-device: 598px;
     position: absolute;
     top: 40%;
     left: 50%;
+    margin-left: 16px;
     z-index: -1000;
   }
 }
 
-html {
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  max-width: $web-width;
+  min-width: 100px;
+  padding: 24px;
+
   @media (max-width: $small-device) {
-    position: absolute;
-    bottom: 0;
+    flex-shrink: 0;
+    padding: 0;
   }
+
+  &.--account {
+    align-items: center;
+    @media (max-width: $small-device) {
+      margin-left: -48px;
+      flex-direction: row;
+    }
+  }
+
+  &.--conversations {
+    @media (max-width: $small-device) {
+      display: none;
+    }
+  }
+
+  &__avatar {
+    height: 64px;
+    width: 64px;
+    @media (max-width: $small-device) {
+      height: 32px;
+      margin: 0 8px;
+      width: 32px;
+    }
+  }
+
+  &__name {
+    text-align: center;
+  }
+}
+
+.conversation-select {
+  align-self: stretch;
+}
+
+.conversation-input {
+  align-items: center;
+  display: flex;
+  margin-top: 16px;
+  &__label {
+    margin-left: 8px;
+  }
+}
+
+.-new-message {
+  background: $message-new;
 }
