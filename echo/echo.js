@@ -5,15 +5,27 @@ const admin = require('./admin.js');
 
 
 class Echo extends events.EventEmitter {
-  constructor(initializeConsole) {
+  constructor(options) {
     super();
     this.profilePath = './profiles/';
     this.commandCenter = new commands.CommandCenter();
+    this.commandCenter.addCommand(commands.changeProfileCommand);
+
     this.stream = fs.createWriteStream(__dirname + "/logs/log.txt", {flags:'a'});
-    if (initializeConsole) {
+
+    if (options.initializeConsole) {
       this.addAdmin(new admin.ConsoleAdminInterface());
     }
-    this.commandCenter.addCommand(commands.changeProfileCommand);
+
+    if (options.modules) {
+      options.modules.forEach(module => {
+        this.loadModule(module);
+      });
+    }
+
+    if (options.profile) {
+      this.commandCenter.invoke('profile', this, options.profile);
+    }
   }
 
   loadModule(module) {

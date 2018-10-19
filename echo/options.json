@@ -1,0 +1,5 @@
+{
+  "initializeConsole": "true",
+  "profile": "echo",
+  "modules": ["...modules"],
+}
