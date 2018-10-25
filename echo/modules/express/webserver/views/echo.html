@@ -40,15 +40,12 @@
         </div>
       </div>
       <div class="sidebar --conversations">
-        <select class="conversation-select" name="conversation">
-          <option value="0">Convo 1</option>
-          <option value="1">Convo 2</option>
-          <option value="1">Convo 3</option>
+        <select id="ConversationSelect" class="conversation-select" name="conversation">
         </select>
-        <span class="conversation-input">
-          <input aria-labelledby="AddConversationSubmit" type="text" name="NewConversation" placeholder="enter_channel_ID">
+        <form id="AddConversationForm" class="conversation-input">
+          <input id="AddConversationInput" aria-labelledby="AddConversationSubmit" type="text" name="NewConversation" placeholder="enter_channel_ID">
           <button id="AddConversationSubmit" class="conversation-input__button --append-input" for="NewConversation">+ADD</button>
-        </span>
+        </form>
       </div>
     </div>
   </body>

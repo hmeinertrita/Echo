@@ -29,6 +29,31 @@ $(document).ready(()=> {
     e.preventDefault();
   });
 
+  $('#AddConversationForm').submit(function(e) {
+    var data = {id: $('#AddConversationInput').val()};
+    $.post('/add', data, () => {});
+    e.preventDefault();
+  });
+
+  $.get({
+    url: '/conversations',
+    data: {},
+    success: (data) => {
+      console.log(data);
+      for (var i = 0; i < data.convos.length; i++) {
+        $('#ConversationSelect').append($('<option value="'+i+'">').text(data.convos[i]));
+      }
+    }
+  });
+  $('#ConversationSelect').change(function(e) {
+    $.post('/setconversation', {id: $('#ConversationSelect').val()}, () => {});
+  });
+
+  $('#AddConversationForm').submit(function(e) {
+    var data = {id: $('#AddConversationInput').val()};
+    e.preventDefault();
+  });
+
 
   $.get('/recentlogs',{},data => {
     data.logs.forEach(msg => {

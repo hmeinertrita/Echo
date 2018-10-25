@@ -19,11 +19,25 @@ function init(e) {
   app.post('/log', (req, res) => {
     pushLog(req.body.mess);
   });
+  app.post('/add', (req, res) => {
+    e.commandCenter.invoke('add-channel', e, req.body.id);
+  });
   app.get('/recentlogs', (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.send({
       logs: logs
     });
+  });
+  app.get('/conversations', (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    res.send({
+      convos: e.conversations.map(c => {
+        return c.name;
+      })
+    });
+  });
+  app.post('/setconversation', (req, res) => {
+    e.setCurrentConversation(req.body.id);
   });
   app.get('/logs', function(request, response) {
     response.sendFile(__dirname + "/../../logs/log.txt");

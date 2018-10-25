@@ -12,8 +12,14 @@ module.exports = (client, server) => {
   });
 
   const addDiscordChannel = new commands.Command('add-channel', function(id) {
-    this.addConversation(new discordConversations.DiscordConversation(client.channels.get(id), client.user.id));
-    this.log("Added discord channel: " + client.channels.get(id).id);
+    var channel = client.channels.get(id);
+    if (channel) {
+      this.addConversation(new discordConversations.DiscordConversation(channel, client.user.id));
+      this.log("Added discord channel: " + client.channels.get(id).id);
+    }
+    else {
+      this.log("No channel " + id + " found!");
+    }
   });
 
   return [discordProfile, addDiscordChannel];

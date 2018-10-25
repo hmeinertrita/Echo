@@ -7,6 +7,7 @@ const admin = require('./admin.js');
 class Echo extends events.EventEmitter {
   constructor(options) {
     super();
+    this.conversations = [];
     this.profilePath = './profiles/';
     this.commandCenter = new commands.CommandCenter();
     this.commandCenter.addCommand(commands.changeProfileCommand);
@@ -38,20 +39,21 @@ class Echo extends events.EventEmitter {
 
   //* Add a conversation Echo is in
   addConversation(conversation) {
+    this.conversations.push(conversation);
     if(!this.currentConversation) {
       this.currentConversation = conversation;
     }
-    this.on('send', (message) => {
-      conversation.send(message);
-    });
+    //this.on('send', (message) => {
+    //  conversation.send(message);
+    //});
     conversation.on('message', (message, user, conversation) => {
       this.listen(message, user, conversation);
     });
   }
 
   //* Set the current conversation Echo is in
-  setCurrentConversation(conversation) {
-    this.currentConversation = conversation;
+  setCurrentConversation(i) {
+    this.currentConversation = this.conversations[i];
   }
 
   //* Handle a message sent in conversation Echo is in
@@ -67,7 +69,8 @@ class Echo extends events.EventEmitter {
   //* Send a message to the current conversation
   send(message) {
     if(this.currentConversation){
-      this.emit('send', message, this.currentConversation);
+      //this.emit('send', message, this.currentConversation);
+      this.currentConversation.send(message);
     }
     else {
       this.log("No conversation specificed! Please specify a conversation before sending.");
