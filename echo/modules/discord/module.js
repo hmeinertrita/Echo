@@ -5,7 +5,7 @@ const config = process.argv[2] !== 'glitch' ? JSON.parse(fs.readFileSync(__dirna
   DISCORD_TOKEN: process.env.DISCORD_TOKEN,
   USER: process.env.USER,
   SERVER: process.env.SERVER,
-  CHANNEL: process.env.CHANNEL,
+  CHANNELS: process.env.CHANNELS,
 };
 const admin = require('./admin.js');
 const conversation = require('./conversation.js');
@@ -20,7 +20,9 @@ function init(e) {
     const discordCommands = commands(client, config.SERVER ? client.guilds.get(config.SERVER) : null);
     echo.loadCommand(...discordCommands);
     echo.commandCenter.commands['profile'].addCommand(echo.commandCenter.commands['discord-profile']);
-    echo.addConversation(new conversation.DiscordConversation(client.channels.get(config.CHANNEL), client.user.id));
+    config.CHANNELS.forEach(channel => {
+      echo.commandCenter.invoke('add-channel', echo, channel);
+    });
 
     echo.log("Discord Client ready");
   });
