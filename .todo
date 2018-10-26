@@ -9,7 +9,9 @@
 -fix style compiling structure
 -clean style rules
 -add colour coding on messages
+-add dropdown arrows
+-add server dropdown
 
 
 Stretch:
--handle on server by server basis
+-generalize server so bot can be used publicly

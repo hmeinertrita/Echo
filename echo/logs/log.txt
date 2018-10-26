@@ -47,3 +47,15 @@ Fri, 26 Oct 2018 20:27:22 GMT ------ copying avatar to webserver...
 Fri, 26 Oct 2018 20:27:22 GMT ------ Set discord server nickname to: Echo 🔊
 Fri, 26 Oct 2018 20:27:22 GMT ------ Discord bot now using profile: echo
 Fri, 26 Oct 2018 20:27:22 GMT ------ copied!
+Fri, 26 Oct 2018 20:35:00 GMT ------ Loaded Profile: QUEBEC
+Fri, 26 Oct 2018 20:35:00 GMT ------ copying avatar to webserver...
+Fri, 26 Oct 2018 20:35:00 GMT ------ copied!
+Fri, 26 Oct 2018 20:35:01 GMT ------ Added discord channel: 495799860071628801
+Fri, 26 Oct 2018 20:35:01 GMT ------ Added discord channel: 505092861662986241
+Fri, 26 Oct 2018 20:35:01 GMT ------ Discord Client ready
+Fri, 26 Oct 2018 20:35:46 GMT ------ Loaded Profile: Echo 🔊
+Fri, 26 Oct 2018 20:35:46 GMT ------ copying avatar to webserver...
+Fri, 26 Oct 2018 20:35:46 GMT ------ copied!
+Fri, 26 Oct 2018 20:35:46 GMT ------ Added discord channel: 495799860071628801
+Fri, 26 Oct 2018 20:35:46 GMT ------ Added discord channel: 505092861662986241
+Fri, 26 Oct 2018 20:35:46 GMT ------ Discord Client ready

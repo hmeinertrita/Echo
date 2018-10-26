@@ -49,6 +49,11 @@ $(document).ready(() => {
     }
   });
 
+  $.get('/profile',{},data => {
+    $('.sidebar__name').text(data.profile.nickname);
+    $('.sidebar__avatar').attr('src', 'images/avatar.png?timestamp=' + new Date().getTime());
+  })
+
   socket.on('profile', function(profile){
     $('.sidebar__name').text(profile.nickname);
     $('.sidebar__avatar').attr('src', 'images/avatar.png?timestamp=' + new Date().getTime());

@@ -42,6 +42,11 @@ function init(e) {
   app.get('/logs', function(request, response) {
     response.sendFile(__dirname + "/../../logs/log.txt");
   });
+  app.get('/profile', function(request, response) {
+    response.send({
+      profile: e.profile
+    });
+  });
 
 
   const sockets = [];
