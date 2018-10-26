@@ -1,0 +1,20 @@
+Thu, 25 Oct 2018 19:49:19 GMT ------ Loaded Profile: QUEBEC
+Thu, 25 Oct 2018 19:49:19 GMT ------ copying avatar to webserver...
+Thu, 25 Oct 2018 19:49:19 GMT ------ copied!
+Thu, 25 Oct 2018 19:49:20 GMT ------ Discord Client ready
+Thu, 25 Oct 2018 19:49:40 GMT ------ Loaded Profile: Echo 🔊
+Thu, 25 Oct 2018 19:49:40 GMT ------ copying avatar to webserver...
+Thu, 25 Oct 2018 19:49:40 GMT ------ Set discord server nickname to: Echo 🔊
+Thu, 25 Oct 2018 19:49:40 GMT ------ Discord bot now using profile: echo
+Thu, 25 Oct 2018 19:49:40 GMT ------ copied!
+Thu, 25 Oct 2018 19:51:17 GMT ------ Loaded Profile: QUEBEC
+Thu, 25 Oct 2018 19:51:48 GMT ------ Loaded Profile: QUEBEC
+Thu, 25 Oct 2018 19:52:16 GMT ------ Loaded Profile: QUEBEC
+Thu, 25 Oct 2018 19:52:16 GMT ------ copying avatar to webserver...
+Thu, 25 Oct 2018 19:52:16 GMT ------ copied!
+Thu, 25 Oct 2018 19:52:16 GMT ------ Discord Client ready
+Thu, 25 Oct 2018 19:52:24 GMT ------ Loaded Profile: Echo 🔊
+Thu, 25 Oct 2018 19:52:24 GMT ------ copying avatar to webserver...
+Thu, 25 Oct 2018 19:52:24 GMT ------ Set discord server nickname to: Echo 🔊
+Thu, 25 Oct 2018 19:52:24 GMT ------ Discord bot now using profile: echo
+Thu, 25 Oct 2018 19:52:24 GMT ------ copied!

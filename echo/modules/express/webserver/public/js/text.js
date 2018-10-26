@@ -73,7 +73,7 @@ $(document).ready(()=> {
 
   socket.on('profile', function(profile){
     $('.sidebar__name').text(profile.nickname);
-    $('.sidebar__avatar').attr('src', 'images/'+profile.avatar);
+    $('.sidebar__avatar').attr('src', 'images/avatar.png?timestamp=' + new Date().getTime());
   });
 });
 
