@@ -7,13 +7,14 @@
     <script src="/js/visualizer.js" type="text/javascript"></script>
     <script src="/js/text.js" type="text/javascript"></script>
     <script src="/js/echo.js" type="text/javascript"></script>
+    <script src="/js/site.js" type="text/javascript"></script>
     <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
   <body>
     <div class="row">
       <div class="sidebar --account">
         <img src="images/avatar.png" alt="Avatar" class="sidebar__avatar">
-        <div class="sidebar__name">QUEBEC</div>
+        <div class="sidebar__name"></div>
       </div>
       <div class="interface">
         <div class="messages">
@@ -25,14 +26,11 @@
               </li>
             </ul>
             <div class="messages__default" id="default-view">
-              <div class="messages__scroll">MSG_HISTORY_SCROLL^</div>
+              <div class="messages__scroll">scroll_up_to_see_history...</div>
               <ul class="messages__new" id="new-messages"></ul>
             </div>
           </div>
         </div>
-
-        <div class="visualizer" id="visualizer"></div>
-
         <div class="send-message">
           <label for='mess' class='send-message__label'>SEND_MESSAGE:</label>
           <form id="message-form" autocomplete="off">
@@ -41,8 +39,8 @@
         </div>
       </div>
       <div class="sidebar --conversations">
-        <select id="ConversationSelect" class="conversation-select" name="conversation">
-        </select>
+        <div class="visualizer" id="visualizer"></div>
+        <select id="ConversationSelect" class="conversation-select" name="conversation"></select>
         <form id="AddConversationForm" class="conversation-input">
           <input id="AddConversationInput" aria-labelledby="AddConversationSubmit" type="text" name="NewConversation" placeholder="enter_channel_ID">
           <button id="AddConversationSubmit" class="conversation-input__button --append-input" for="NewConversation">+ADD</button>

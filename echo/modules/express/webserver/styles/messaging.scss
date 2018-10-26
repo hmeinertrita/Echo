@@ -3,16 +3,15 @@
   display: flex;
   height: 100vh;
   justify-content: space-between;
-  padding: 64px 32px;
+  padding: 64px 0;
   width: 100vw;
+  overflow-x: hidden;
   @media (max-width: $small-device) {
     flex-direction: column;
-    height: 65vw;
     justify-content: flex-end;
-    padding: 0;
-    margin: 16px 16px 16px 48px;
+    padding: 16px;
     max-width: $web-width;
-    width: calc(100vw - 64px);
+    overflow-x: visible;
   }
 }
 
@@ -20,12 +19,14 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
+  flex-shrink: 2;
   justify-content: space-between;
   max-width: $web-width;
+  min-width: 310px;
   width: 100%;
   @media (max-width: $small-device) {
     flex-shrink: 0;
+    min-width: 0;
   }
 }
 
@@ -36,7 +37,7 @@
   &__box {
     display: flex;
     flex-direction: column;
-    height: 200px;
+    height: 75vh;
     border: 1px solid;
     overflow-y: auto;
     @media (max-width: $small-device) {
@@ -52,7 +53,7 @@
 
   &__default {
     flex-shrink: 0;
-    min-height: 200px;
+    min-height: 75vh;
     display: flex;
     flex-direction: column;
     @media (max-width: $small-device) {
@@ -61,7 +62,6 @@
   }
 
   &__scroll {
-    height: 24px;
     background: $message-old;
   }
 
@@ -94,14 +94,18 @@
 }
 
 .visualizer {
-  flex-grow: 1;
   position: relative;
+  border: 1px solid cyan;
+  clip-path: inset(0 0 0 0);
+  display: flex;
+  margin-bottom: 16px;
+  padding-bottom: 100%;
   @media (max-width: $small-device) {
+    display: none;
     filter: blur(1px);
     position: absolute;
     top: 40%;
     left: 50%;
-    margin-left: 16px;
     z-index: -1000;
   }
 }
@@ -110,25 +114,31 @@
   display: flex;
   flex-direction: column;
   max-width: $web-width;
-  min-width: 100px;
-  padding: 24px;
+  //min-width: 100px;
+  margin: 24px;
 
   @media (max-width: $small-device) {
     flex-shrink: 0;
-    padding: 0;
+    margin: 0;
   }
 
   &.--account {
     align-items: center;
     @media (max-width: $small-device) {
-      margin-left: -48px;
+      align-items: flex-end;
       flex-direction: row;
+      margin-bottom: 4px;
     }
   }
 
   &.--conversations {
     @media (max-width: $small-device) {
-      display: none;
+      flex-direction: row;
+      margin-top: 8px;
+
+      input, select, button {
+        height: 24px;
+      }
     }
   }
 
@@ -137,18 +147,24 @@
     width: 64px;
     @media (max-width: $small-device) {
       height: 32px;
-      margin: 0 8px;
+      margin-right: 8px;
+      min-width: 0;
       width: 32px;
     }
   }
 
   &__name {
     text-align: center;
+    white-space: nowrap;
   }
 }
 
 .conversation-select {
   align-self: stretch;
+
+  @media (max-width: $small-device) {
+
+  }
 }
 
 .conversation-input {
@@ -157,6 +173,49 @@
   margin-top: 16px;
   &__label {
     margin-left: 8px;
+  }
+
+  @media (max-width: $small-device) {
+    margin-top: 0;
+    margin-left: 8px;
+  }
+
+}
+.show-hide {
+  @media (min-width: $small-device) {
+    display: none;
+  }
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  margin: 8px 0;
+
+  button {
+    font-size: 16px;
+    height: 20px;
+  }
+
+  .divider {
+    flex-grow: 1;
+    border-top: 1px solid #fff;
+  }
+
+  &.--collapsed {
+    .hide {
+      display: none;
+    }
+
+    &+.--conversations {
+      @media (max-width: $small-device) {
+        display: none;
+      }
+    }
+  }
+
+  &:not(.--collapsed) {
+    .show {
+      display: none;
+    }
   }
 }
 

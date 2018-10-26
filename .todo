@@ -6,3 +6,10 @@
 -add responsive server/convo switcher on web page
 -fix initial profile loading on webpage
 -change all runtime execution on echo to use commands
+-fix style compiling structure
+-clean style rules
+-add colour coding on messages
+
+
+Stretch:
+-handle on server by server basis

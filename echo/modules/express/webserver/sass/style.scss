@@ -4,7 +4,7 @@
 
 $input-height: 40px;
 $border-main: 1px solid $border-primary;
-$web-width: 390px;
+$web-width: 790px;
 $small-device: 598px;
 
 * {
@@ -30,6 +30,9 @@ body, input, select, button {
   color: $font-primary;
   font-family: 'VT323', monospace !important;
   font-size: 24px;
+  @media (max-width: $small-device) {
+    font-size: 18px;
+  }
 }
 
 input, select, button {
@@ -37,7 +40,10 @@ input, select, button {
   border: $border-main;
   border-radius: 0;
   height: $input-height;
-  padding: 0 12px;
+  padding: 0 8px;
+  @media (max-width: $small-device) {
+    height: 32px;
+  }
 }
 
 select, button {
