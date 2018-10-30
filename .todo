@@ -8,7 +8,8 @@
 -clean style rules
 -add colour coding on messages
 -add dropdown arrows
--add server dropdown
+-add server selection
+-move webserver out of module
 
 
 Stretch:

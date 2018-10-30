@@ -66,3 +66,4 @@ Tue, 30 Oct 2018 14:25:51 GMT ------ Added discord channel: 495799860071628801
 Tue, 30 Oct 2018 14:25:51 GMT ------ Added discord channel: 505092861662986241
 Tue, 30 Oct 2018 14:25:51 GMT ------ Discord Client ready
 Tue, 30 Oct 2018 14:26:12 GMT ------ Echo 🔊: hello
+Tue, 30 Oct 2018 14:39:15 GMT ------ #test@nicknametest: hi
