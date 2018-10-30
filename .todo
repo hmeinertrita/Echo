@@ -3,8 +3,6 @@
 -document js files so other html implementations can be made easily
 -load profile pic better
 -validate duplicate conversations
--add responsive server/convo switcher on web page
--fix initial profile loading on webpage
 -change all runtime execution on echo to use commands
 -fix style compiling structure
 -clean style rules

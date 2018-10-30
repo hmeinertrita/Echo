@@ -37,7 +37,8 @@
   &__box {
     display: flex;
     flex-direction: column;
-    height: 75vh;
+    flex-shrink: 0;
+    height: 70vh;
     border: 1px solid;
     overflow-y: auto;
     @media (max-width: $small-device) {
@@ -53,7 +54,7 @@
 
   &__default {
     flex-shrink: 0;
-    min-height: 75vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     @media (max-width: $small-device) {

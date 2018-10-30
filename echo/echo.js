@@ -70,6 +70,7 @@ class Echo extends events.EventEmitter {
   send(message) {
     if(this.currentConversation){
       //this.emit('send', message, this.currentConversation);
+      this.log(this.profile.nickname+": "+message);
       this.currentConversation.send(message);
     }
     else {

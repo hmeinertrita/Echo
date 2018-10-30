@@ -291,7 +291,8 @@ a a:visited {
 .messages__box {
   display: flex;
   flex-direction: column;
-  height: 75vh;
+  flex-shrink: 0;
+  height: 70vh;
   border: 1px solid;
   overflow-y: auto;
 }
@@ -302,59 +303,59 @@ a a:visited {
   }
 }
 @media (max-width: 598px) {
-  /* line 48, ../../styles/messaging.scss */
+  /* line 49, ../../styles/messaging.scss */
   .messages__header {
     display: none;
   }
 }
-/* line 54, ../../styles/messaging.scss */
+/* line 55, ../../styles/messaging.scss */
 .messages__default {
   flex-shrink: 0;
-  min-height: 75vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
 }
 @media (max-width: 598px) {
-  /* line 54, ../../styles/messaging.scss */
+  /* line 55, ../../styles/messaging.scss */
   .messages__default {
     min-height: 40vw;
   }
 }
-/* line 64, ../../styles/messaging.scss */
+/* line 65, ../../styles/messaging.scss */
 .messages__scroll {
   background: rgba(255, 255, 255, 0.2);
 }
-/* line 68, ../../styles/messaging.scss */
+/* line 69, ../../styles/messaging.scss */
 .messages__old {
   background: rgba(255, 255, 255, 0.2);
   flex-shrink: 0;
   list-style: none;
   backdrop-filter: blur(1px);
 }
-/* line 75, ../../styles/messaging.scss */
+/* line 76, ../../styles/messaging.scss */
 .messages__new {
   list-style: none;
   display: flex;
   flex-direction: column-reverse;
 }
-/* line 81, ../../styles/messaging.scss */
+/* line 82, ../../styles/messaging.scss */
 .messages__logs {
   display: flex;
   flex-direction: column;
 }
-/* line 85, ../../styles/messaging.scss */
+/* line 86, ../../styles/messaging.scss */
 .messages__link {
   border-bottom: 1px solid #fff;
 }
 
-/* line 90, ../../styles/messaging.scss */
+/* line 91, ../../styles/messaging.scss */
 .send-message {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-/* line 96, ../../styles/messaging.scss */
+/* line 97, ../../styles/messaging.scss */
 .visualizer {
   position: relative;
   border: 1px solid cyan;
@@ -364,7 +365,7 @@ a a:visited {
   padding-bottom: 100%;
 }
 @media (max-width: 598px) {
-  /* line 96, ../../styles/messaging.scss */
+  /* line 97, ../../styles/messaging.scss */
   .visualizer {
     display: none;
     filter: blur(1px);
@@ -375,7 +376,7 @@ a a:visited {
   }
 }
 
-/* line 113, ../../styles/messaging.scss */
+/* line 114, ../../styles/messaging.scss */
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -383,18 +384,18 @@ a a:visited {
   margin: 24px;
 }
 @media (max-width: 598px) {
-  /* line 113, ../../styles/messaging.scss */
+  /* line 114, ../../styles/messaging.scss */
   .sidebar {
     flex-shrink: 0;
     margin: 0;
   }
 }
-/* line 125, ../../styles/messaging.scss */
+/* line 126, ../../styles/messaging.scss */
 .sidebar.--account {
   align-items: center;
 }
 @media (max-width: 598px) {
-  /* line 125, ../../styles/messaging.scss */
+  /* line 126, ../../styles/messaging.scss */
   .sidebar.--account {
     align-items: flex-end;
     flex-direction: row;
@@ -402,23 +403,23 @@ a a:visited {
   }
 }
 @media (max-width: 598px) {
-  /* line 134, ../../styles/messaging.scss */
+  /* line 135, ../../styles/messaging.scss */
   .sidebar.--conversations {
     flex-direction: row;
     margin-top: 8px;
   }
-  /* line 139, ../../styles/messaging.scss */
+  /* line 140, ../../styles/messaging.scss */
   .sidebar.--conversations input, .sidebar.--conversations select, .sidebar.--conversations button {
     height: 24px;
   }
 }
-/* line 145, ../../styles/messaging.scss */
+/* line 146, ../../styles/messaging.scss */
 .sidebar__avatar {
   height: 64px;
   width: 64px;
 }
 @media (max-width: 598px) {
-  /* line 145, ../../styles/messaging.scss */
+  /* line 146, ../../styles/messaging.scss */
   .sidebar__avatar {
     height: 32px;
     margin-right: 8px;
@@ -426,36 +427,36 @@ a a:visited {
     width: 32px;
   }
 }
-/* line 156, ../../styles/messaging.scss */
+/* line 157, ../../styles/messaging.scss */
 .sidebar__name {
   text-align: center;
   white-space: nowrap;
 }
 
-/* line 162, ../../styles/messaging.scss */
+/* line 163, ../../styles/messaging.scss */
 .conversation-select {
   align-self: stretch;
 }
 
-/* line 170, ../../styles/messaging.scss */
+/* line 171, ../../styles/messaging.scss */
 .conversation-input {
   align-items: center;
   display: flex;
   margin-top: 16px;
 }
-/* line 174, ../../styles/messaging.scss */
+/* line 175, ../../styles/messaging.scss */
 .conversation-input__label {
   margin-left: 8px;
 }
 @media (max-width: 598px) {
-  /* line 170, ../../styles/messaging.scss */
+  /* line 171, ../../styles/messaging.scss */
   .conversation-input {
     margin-top: 0;
     margin-left: 8px;
   }
 }
 
-/* line 184, ../../styles/messaging.scss */
+/* line 185, ../../styles/messaging.scss */
 .show-hide {
   align-items: center;
   display: flex;
@@ -463,37 +464,37 @@ a a:visited {
   margin: 8px 0;
 }
 @media (min-width: 598px) {
-  /* line 184, ../../styles/messaging.scss */
+  /* line 185, ../../styles/messaging.scss */
   .show-hide {
     display: none;
   }
 }
-/* line 193, ../../styles/messaging.scss */
+/* line 194, ../../styles/messaging.scss */
 .show-hide button {
   font-size: 16px;
   height: 20px;
 }
-/* line 198, ../../styles/messaging.scss */
+/* line 199, ../../styles/messaging.scss */
 .show-hide .divider {
   flex-grow: 1;
   border-top: 1px solid #fff;
 }
-/* line 204, ../../styles/messaging.scss */
+/* line 205, ../../styles/messaging.scss */
 .show-hide.--collapsed .hide {
   display: none;
 }
 @media (max-width: 598px) {
-  /* line 208, ../../styles/messaging.scss */
+  /* line 209, ../../styles/messaging.scss */
   .show-hide.--collapsed + .--conversations {
     display: none;
   }
 }
-/* line 216, ../../styles/messaging.scss */
+/* line 217, ../../styles/messaging.scss */
 .show-hide:not(.--collapsed) .show {
   display: none;
 }
 
-/* line 222, ../../styles/messaging.scss */
+/* line 223, ../../styles/messaging.scss */
 .-new-message {
   background: transparent;
 }

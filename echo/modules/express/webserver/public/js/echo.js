@@ -2,7 +2,7 @@ $(document).ready(() => {
   $('#message-form').submit(function(e) {
     var data = {mess: $('#input').val()};
     socket.emit('recieve', data.mess);
-    $('#new-messages').prepend($('<li class="-new-message">').text(data.mess));
+    //$('#new-messages').prepend($('<li class="-new-message">').text(data.mess));
     $('#input').val('');
     e.preventDefault();
   });

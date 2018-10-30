@@ -59,3 +59,10 @@ Fri, 26 Oct 2018 20:35:46 GMT ------ copied!
 Fri, 26 Oct 2018 20:35:46 GMT ------ Added discord channel: 495799860071628801
 Fri, 26 Oct 2018 20:35:46 GMT ------ Added discord channel: 505092861662986241
 Fri, 26 Oct 2018 20:35:46 GMT ------ Discord Client ready
+Tue, 30 Oct 2018 14:25:50 GMT ------ Loaded Profile: Echo 🔊
+Tue, 30 Oct 2018 14:25:50 GMT ------ copying avatar to webserver...
+Tue, 30 Oct 2018 14:25:50 GMT ------ copied!
+Tue, 30 Oct 2018 14:25:51 GMT ------ Added discord channel: 495799860071628801
+Tue, 30 Oct 2018 14:25:51 GMT ------ Added discord channel: 505092861662986241
+Tue, 30 Oct 2018 14:25:51 GMT ------ Discord Client ready
+Tue, 30 Oct 2018 14:26:12 GMT ------ Echo 🔊: hello
