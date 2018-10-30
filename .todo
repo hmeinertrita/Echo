@@ -10,7 +10,7 @@
 -add dropdown arrows
 -add server selection
 -move webserver out of module
-
+-handle config through env vars
 
 Stretch:
 -generalize server so bot can be used publicly
