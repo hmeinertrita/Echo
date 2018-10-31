@@ -1,5 +1,4 @@
 Echo
--separate express web interface from discord explicitly
 -validate duplicate conversations
 -change all runtime execution on echo to use commands
 -handle loading config through env vars
@@ -9,7 +8,7 @@ Echo
 -implement express module config
 -load profile directory through config
 -add echo & modules as npm packages
--better injecting of express app by express module
+-better injecting of express app into express module
 
 Web Server
 -fix style compiling structure
@@ -22,3 +21,4 @@ Web Server
 
 Stretch:
 -isolate servers so bot can be used publicly
+-create boilerplate web server
