@@ -9,6 +9,7 @@ Echo
 -implement express module config
 -load profile directory through config
 -add echo & modules as npm packages
+-better injecting of express app by express module
 
 Web Server
 -fix style compiling structure
