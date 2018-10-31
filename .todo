@@ -2,10 +2,11 @@ Echo
 -separate express web interface from discord explicitly
 -validate duplicate conversations
 -change all runtime execution on echo to use commands
--handle optional config through env vars
+-handle loading config through env vars
 -implement commands as promises
 -make it easy to update glitch server
 -implement modules as subclass of an abstract Echo.Module class
+-implement express module config
 
 Web Server
 -fix style compiling structure
