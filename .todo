@@ -7,6 +7,8 @@ Echo
 -make it easy to update glitch server
 -implement modules as subclass of an abstract Echo.Module class
 -implement express module config
+-load profile directory through config
+-add echo & modules as npm packages
 
 Web Server
 -fix style compiling structure
@@ -18,4 +20,4 @@ Web Server
 -document js files so other html implementations can be made easily
 
 Stretch:
--generalize server so bot can be used publicly
+-isolate servers so bot can be used publicly
