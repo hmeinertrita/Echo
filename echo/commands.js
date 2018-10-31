@@ -61,7 +61,10 @@ class CompositeCommand extends Command {
 }
 
 const loadProfile = new Command('load-profile', function(profileName) {
-  this.profile = JSON.parse(fs.readFileSync(this.profilePath + profileName + '/profile.json'));
+  if (!this.profiles[profileName]) {
+    this.profiles[profileName] = JSON.parse(fs.readFileSync(this.profilePath + profileName + '/profile.json'));
+  }
+  this.profile = this.profiles[profileName];
   this.log("Loaded Profile: "+this.profile.nickname);
 });
 

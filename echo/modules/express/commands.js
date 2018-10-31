@@ -28,15 +28,15 @@ class SocketCommand extends commands.Command {
 }
 
 module.exports = (path) => {
-  const copyAvatar = new commands.Command("copy-avatar", function() {
-    const src = this.profilePath + this.profile.id + '/' + this.profile.avatar;
-    const dest = __dirname + path + '/avatar.png';
-    this.log('copying avatar to webserver...');
-    fs.copyFile(src, dest, err => {
-      if (err) throw err;
-      this.log('copied!');
-    });
-  });
+  // const copyAvatar = new commands.Command("copy-avatar", function() {
+  //   const src = this.profilePath + this.profile.id + '/' + this.profile.avatar;
+  //   const dest = path + '/avatar.png';
+  //   this.log('copying avatar to webserver...');
+  //   fs.copyFile(src, dest, err => {
+  //     if (err) throw err;
+  //     this.log('copied!');
+  //   });
+  // });
 
   const socketProfile = new SocketCommand('socket-profile', socket => {
     return function() {
@@ -44,5 +44,5 @@ module.exports = (path) => {
     };
   });
 
-  return [copyAvatar, socketProfile];
+  return [socketProfile];
 };

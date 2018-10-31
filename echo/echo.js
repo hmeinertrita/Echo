@@ -8,7 +8,8 @@ class Echo extends events.EventEmitter {
   constructor(options) {
     super();
     this.conversations = [];
-    this.profilePath = './profiles/';
+    this.profilePath = __dirname + '/profiles/';
+    this.profiles = {};
     this.commandCenter = new commands.CommandCenter();
     this.commandCenter.addCommand(commands.changeProfileCommand);
 
@@ -20,7 +21,7 @@ class Echo extends events.EventEmitter {
 
     if (options.modules) {
       options.modules.forEach(module => {
-        this.loadModule(module);
+        this.loadModule(require('./modules/'+module+'/module.js'));
       });
     }
 
@@ -70,7 +71,7 @@ class Echo extends events.EventEmitter {
   send(message) {
     if(this.currentConversation){
       //this.emit('send', message, this.currentConversation);
-      this.log(this.profile.nickname+": "+message);
+      this.log(this.userProfile.nickname+": "+message);
       this.currentConversation.send(message);
     }
     else {

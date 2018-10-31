@@ -1,15 +1,16 @@
+const fs = require('fs');
 const express = require('express');
 const admin = require('./admin.js');
-const commands = require('./commands.js')('/webserver/public/images');
+const commands = require('./commands.js')('webserver/public/images');
+const config = JSON.parse(fs.readFileSync(__dirname + '/config.json'));
 
-function init(e) {
+function init(e, app) {
   //Initialize express server
-  const app = express();
+  app = app ? app : express();
   const http = require('http').Server(app);
   const io = require('socket.io')(http);
   app.use(express.urlencoded());
   app.use(express.json());
-  app.use(express.static(__dirname + '/webserver/public'));
 
   //handle logging
   const logs = [];
@@ -40,7 +41,7 @@ function init(e) {
     e.setCurrentConversation(req.body.id);
   });
   app.get('/logs', function(request, response) {
-    response.sendFile(__dirname + "/../../logs/log.txt");
+    response.sendFile("/echo/logs/log.txt");
   });
   app.get('/profile', function(request, response) {
     response.send({
@@ -48,12 +49,16 @@ function init(e) {
     });
   });
 
+  app.get('/avatar', function(request, response) {
+    response.sendFile(e.profilePath+e.profile.id+'/'+e.profile.avatar);
+  });
+
 
   const sockets = [];
   const interface = (new admin.ExpressAdminInterface(app, pushLog));
   e.addAdmin(interface);
   e.loadCommand(...commands);
-  e.commandCenter.commands['profile'].addCommand(e.commandCenter.commands['copy-avatar']);
+  // e.commandCenter.commands['profile'].addCommand(e.commandCenter.commands['copy-avatar']);
   e.commandCenter.commands['profile'].addCommand(e.commandCenter.commands['socket-profile']);
 
   io.on('connection', function(socket){
@@ -64,10 +69,6 @@ function init(e) {
         command.addSocket(socket);
       }
     });
-  });
-
-  app.get('/', function(request, response) {
-    response.sendFile(__dirname + '/webserver/views/echo.html');
   });
 
   const port = 5000;

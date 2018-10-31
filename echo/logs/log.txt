@@ -67,3 +67,115 @@ Tue, 30 Oct 2018 14:25:51 GMT ------ Added discord channel: 505092861662986241
 Tue, 30 Oct 2018 14:25:51 GMT ------ Discord Client ready
 Tue, 30 Oct 2018 14:26:12 GMT ------ Echo 🔊: hello
 Tue, 30 Oct 2018 14:39:15 GMT ------ #test@nicknametest: hi
+Wed, 31 Oct 2018 17:09:58 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:09:58 GMT ------ copying avatar to webserver...
+Wed, 31 Oct 2018 17:10:25 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:11:02 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:13:53 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:13:53 GMT ------ copying avatar to webserver...
+Wed, 31 Oct 2018 17:13:53 GMT ------ copied!
+Wed, 31 Oct 2018 17:13:54 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:13:54 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:13:54 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:14:54 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:14:54 GMT ------ copying avatar to webserver...
+Wed, 31 Oct 2018 17:14:54 GMT ------ copied!
+Wed, 31 Oct 2018 17:14:54 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:14:54 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:14:54 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:15:21 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:15:21 GMT ------ copying avatar to webserver...
+Wed, 31 Oct 2018 17:15:21 GMT ------ copied!
+Wed, 31 Oct 2018 17:15:22 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:15:22 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:15:22 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:17:49 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:17:49 GMT ------ copying avatar to webserver...
+Wed, 31 Oct 2018 17:17:49 GMT ------ copied!
+Wed, 31 Oct 2018 17:17:49 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:17:49 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:17:49 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:21:35 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:21:35 GMT ------ copying avatar to webserver...
+Wed, 31 Oct 2018 17:21:35 GMT ------ copied!
+Wed, 31 Oct 2018 17:21:36 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:21:36 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:21:36 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:22:23 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:22:23 GMT ------ copying avatar to webserver...
+Wed, 31 Oct 2018 17:22:23 GMT ------ copied!
+Wed, 31 Oct 2018 17:22:24 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:22:24 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:22:24 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:33:34 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:33:34 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:33:34 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:33:34 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:39:08 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:39:09 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:39:09 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:39:09 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:39:29 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:39:29 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:39:29 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:39:29 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:42:08 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:42:09 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:42:09 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:42:09 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:42:45 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:42:45 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:42:45 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:42:45 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:43:16 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:43:16 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:43:16 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:43:16 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:52:32 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:52:32 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:52:32 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:52:32 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:53:07 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:53:08 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:53:08 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:53:08 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:54:25 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:54:25 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:54:25 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:54:25 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:54:49 GMT ------ Loaded Profile: QUEBEC
+Wed, 31 Oct 2018 17:56:22 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:56:23 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:56:23 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:56:23 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:56:38 GMT ------ Loaded Profile: QUEBEC
+Wed, 31 Oct 2018 17:56:59 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:57:00 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:57:00 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:57:00 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:57:41 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:57:41 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:57:41 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:57:41 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:57:52 GMT ------ Loaded Profile: QUEBEC
+Wed, 31 Oct 2018 17:59:31 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 17:59:37 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 17:59:37 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 17:59:37 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 17:59:49 GMT ------ Loaded Profile: QUEBEC
+Wed, 31 Oct 2018 17:59:49 GMT ------ Set discord server nickname to: QUEBEC
+Wed, 31 Oct 2018 17:59:49 GMT ------ Discord bot now using profile: quebec
+Wed, 31 Oct 2018 18:00:50 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 18:00:50 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 18:00:50 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 18:00:50 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 18:01:02 GMT ------ Loaded Profile: QUEBEC
+Wed, 31 Oct 2018 18:01:02 GMT ------ Set discord server nickname to: QUEBEC
+Wed, 31 Oct 2018 18:01:02 GMT ------ Discord bot now using profile: quebec
+Wed, 31 Oct 2018 18:03:03 GMT ------ Loaded Profile: Echo 🔊
+Wed, 31 Oct 2018 18:03:03 GMT ------ Added discord channel: 495799860071628801
+Wed, 31 Oct 2018 18:03:03 GMT ------ Added discord channel: 505092861662986241
+Wed, 31 Oct 2018 18:03:03 GMT ------ Discord Client ready
+Wed, 31 Oct 2018 18:03:13 GMT ------ Loaded Profile: QUEBEC
+Wed, 31 Oct 2018 18:03:13 GMT ------ Set discord server nickname to: QUEBEC
+Wed, 31 Oct 2018 18:03:13 GMT ------ Discord bot now using profile: quebec

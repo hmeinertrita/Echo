@@ -10,7 +10,10 @@
 -add dropdown arrows
 -add server selection
 -move webserver out of module
--handle config through env vars
+-handle optional config through env vars
+-implement commands as promises
+-make it easy to update glitch server
+-implement modules as subclass of a abstract Echo.Module class
 
 Stretch:
 -generalize server so bot can be used publicly
